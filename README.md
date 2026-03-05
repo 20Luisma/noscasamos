@@ -1,16 +1,85 @@
-# React + Vite
+# 💍 noscasamos.uy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Plataforma MVP de bodas para Uruguay — inspirada en Bodas.net
 
-Currently, two official plugins are available:
+## ¿Qué es?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**noscasamos.uy** es un MVP (Producto Mínimo Viable) de una plataforma web para parejas que planifican su boda en Uruguay. Permite explorar proveedores, espacios de celebración y herramientas de planificación nupcial, todo localizado para el mercado uruguayo.
 
-## React Compiler
+## ¿Cómo está construido?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Tecnología | Uso |
+|---|---|
+| **React 19** | Framework UI principal |
+| **TypeScript** | Tipado estático |
+| **Vite 5** | Bundler y servidor de desarrollo |
+| **React Router v7** | Navegación entre páginas |
+| **lucide-react** | Librería de íconos |
+| **CSS Vanilla** | Estilos personalizados sin frameworks |
+| **Netlify** | Hosting y deploy automático |
 
-## Expanding the ESLint configuration
+### Estructura del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/     # Navbar, Footer, íconos
+├── pages/          # Home, Directorio, Detalle de proveedor
+├── data/           # Fuentes de datos (estáticas por ahora)
+├── domain/         # Entidades y casos de uso (arquitectura limpia)
+└── presentation/   # Contextos y hooks
+```
+
+## Estado actual del MVP
+
+- ✅ Landing page con buscador de categorías y departamentos de Uruguay
+- ✅ Sección de planificación con tarjetas
+- ✅ Navbar responsive con dropdowns
+- ✅ Footer informativo
+- ✅ Rutas: Home / Directorio / Detalle de proveedor
+- ✅ Deploy en Netlify con CI/CD via GitHub
+
+## Finalidad
+
+Validar la demanda del mercado nupcial uruguayo con una interfaz atractiva y funcional, antes de invertir en backend, base de datos y perfil de proveedores reales.
+
+## 🚀 Hoja de ruta — Hacia dónde escalaremos
+
+### Fase 2 — Backend y proveedores reales
+- [ ] Base de datos de proveedores reales (Supabase / PostgreSQL)
+- [ ] Sistema de registro y perfil de proveedor
+- [ ] Búsqueda y filtros avanzados por categoría, precio y zona
+- [ ] Galería de fotos por proveedor
+
+### Fase 3 — Monetización
+- [ ] Plan premium para proveedores (destacados, analytics)
+- [ ] Sistema de contacto y solicitud de presupuesto
+- [ ] Reseñas y valoraciones verificadas
+
+### Fase 4 — Herramientas para parejas
+- [ ] Planificador de bodas (checklist, presupuesto, lista de invitados)
+- [ ] Web de boda personalizada para compartir con invitados
+- [ ] Organizador de mesas
+
+### Fase 5 — Expansión regional
+- [ ] Adaptación para Argentina, Chile y Paraguay
+- [ ] App móvil (React Native)
+
+---
+
+## Desarrollo local
+
+```bash
+npm install
+npm run dev       # Servidor de desarrollo en localhost:5173
+npm run build     # Build de producción en /dist
+```
+
+## Deploy
+
+El proyecto se despliega automáticamente en **Netlify** al hacer `git push` a la rama `main`.
+
+```bash
+git add .
+git commit -m "descripción del cambio"
+git push
+```
