@@ -1,0 +1,436 @@
+/* =====================================================
+   ESPACIOS DE CELEBRACIÓN PAGE
+   ===================================================== */
+
+.espacios-page {
+    width: 100%;
+}
+
+/* ─── HERO ─────────────────────────────────────────── */
+.esp-hero {
+    display: flex;
+    min-height: 60vh;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.esp-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 52%;
+    background: #fff;
+    padding: 80px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+.esp-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+}
+
+.esp-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.esp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+}
+
+.esp-breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.esp-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.esp-breadcrumb strong {
+    color: var(--text-main);
+}
+
+.esp-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--secondary);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.esp-hero-sub {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 1.8rem;
+}
+
+/* Search bar */
+.esp-search-bar {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    overflow: hidden;
+    max-width: 520px;
+}
+
+.esp-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.75rem 1rem;
+}
+
+.esp-search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    color: var(--text-main);
+    width: 100%;
+}
+
+.esp-search-field input::placeholder {
+    color: #a0a0a0;
+}
+
+.esp-search-icon {
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+.esp-search-divider {
+    width: 1px;
+    background: var(--border-color);
+    margin: 0.5rem 0;
+}
+
+.esp-search-btn {
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* ─── SECTION TITLE ─────────────────────────────────── */
+.esp-section-title {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* ─── DEPARTAMENTOS ─────────────────────────────────── */
+.esp-deptos {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.esp-deptos-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.esp-depto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.esp-depto-card:hover {
+    transform: translateY(-4px);
+}
+
+.esp-depto-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.esp-depto-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esp-depto-name {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.esp-depto-count {
+    font-size: 0.78rem;
+    color: var(--text-light);
+}
+
+/* ─── PROMO SECTION ─────────────────────────────────── */
+.esp-promo {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 3rem 0;
+    overflow: hidden;
+}
+
+.esp-promo-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.esp-promo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+}
+
+.esp-promo-card {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 3rem 3rem 3rem 8%;
+    max-width: 40%;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.esp-promo-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.esp-promo-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ─── GRID DE TARJETAS ──────────────────────────────── */
+.esp-grid-section {
+    padding: 1rem 2rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.esp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.esp-card {
+    text-decoration: none;
+    background: #fff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.esp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.esp-card-img-wrap {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+}
+
+.esp-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.esp-card:hover .esp-card-img {
+    transform: scale(1.05);
+}
+
+.esp-badge-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f8b400;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.esp-fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.esp-fav-btn:hover {
+    transform: scale(1.15);
+}
+
+.esp-fav-btn.active {
+    background: #fff5f7;
+}
+
+.esp-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.esp-card-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    line-height: 1.3;
+}
+
+.esp-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.esp-card-rating strong {
+    color: var(--text-main);
+}
+
+.esp-card-location {
+    margin-left: 0.2rem;
+}
+
+.esp-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+}
+
+.esp-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.esp-meta-price {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.esp-promo-badge {
+    font-size: 0.78rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────── */
+@media (max-width: 900px) {
+    .esp-hero {
+        flex-direction: column;
+    }
+
+    .esp-hero-left {
+        width: 100%;
+        border-radius: 0;
+        padding: 5rem 2rem 2rem;
+    }
+
+    .esp-hero-right {
+        position: relative;
+        width: 100%;
+        height: 260px;
+    }
+
+    .esp-promo-card {
+        max-width: 60%;
+    }
+
+    .esp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .esp-promo-card {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .esp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .esp-deptos-grid {
+        gap: 1rem;
+    }
+
+    .esp-depto-circle {
+        width: 85px;
+        height: 85px;
+    }
+}

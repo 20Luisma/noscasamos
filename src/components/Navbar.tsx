@@ -18,12 +18,12 @@ const NAV_MENUS = [
     {
         label: 'Lugares para Boda',
         items: [
-            { label: 'Estancias & Campos', to: '/directorio' },
-            { label: 'Hoteles', to: '/directorio' },
-            { label: 'Salones de Fiesta', to: '/directorio' },
-            { label: 'Restaurantes', to: '/directorio' },
-            { label: 'Bodas en la playa', to: '/directorio' },
-            { label: 'Espacios singulares', to: '/directorio' },
+            { label: 'Espacios de Celebración', to: '/espacios' },
+            { label: 'Estancias & Campos', to: '/espacios' },
+            { label: 'Hoteles', to: '/espacios' },
+            { label: 'Salones de Fiesta', to: '/espacios' },
+            { label: 'Restaurantes', to: '/espacios' },
+            { label: 'Bodas en la playa', to: '/espacios' },
         ],
     },
     {
