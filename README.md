@@ -60,9 +60,20 @@ Validar la demanda del mercado nupcial uruguayo con una interfaz atractiva y fun
 - [ ] Web de boda personalizada para compartir con invitados
 - [ ] Organizador de mesas
 
-### Fase 5 — Expansión regional
+### Fase 5 — Paneles de administración
+- [ ] **Panel de Admin general** — gestión de proveedores, usuarios y contenido desde un backoffice web
+- [ ] **Panel para empresas/proveedores** — dashboard con estadísticas, gestión de perfil, fotos, precios y solicitudes recibidas
+- [ ] **Panel para parejas (clientes)** — seguimiento de presupuesto, lista de proveedores favoritos, checklist de tareas y gestión de invitados
+- [ ] Roles y permisos diferenciados (admin, proveedor, cliente)
+
+### Fase 6 — Aplicaciones móviles
+- [ ] **App para parejas** (iOS & Android) — planificación de boda desde el móvil, notificaciones y agenda
+- [ ] **App para proveedores** — gestión de solicitudes, mensajería y agenda desde el móvil
+- [ ] Desarrollada en **React Native** reutilizando la lógica de negocio del frontend web
+
+### Fase 7 — Expansión regional
 - [ ] Adaptación para Argentina, Chile y Paraguay
-- [ ] App móvil (React Native)
+- [ ] Versiones localizadas con proveedores y monedas regionales
 
 ---
 
