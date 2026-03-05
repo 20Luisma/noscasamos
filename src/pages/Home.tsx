@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Search, MapPin, Home as HomeIcon, Camera, Music, Car, Flower2, UtensilsCrossed, ClipboardList, Plane, Cake, Gem, Sparkles, Shirt, User } from 'lucide-react';
 import './Home.css';
 import { Link } from 'react-router-dom';
@@ -62,6 +63,7 @@ const Home = () => {
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
     const [locationTab, setLocationTab] = useState<'departamento' | 'internacional'>('departamento');
     const [openContinents, setOpenContinents] = useState<string[]>([]);
+    const [locDropPos, setLocDropPos] = useState({ top: 0, left: 0, width: 0 });
 
     const searchRef = useRef<HTMLDivElement>(null);
     const locationRef = useRef<HTMLDivElement>(null);
@@ -90,6 +92,15 @@ const Home = () => {
     const openLocationDropdown = () => {
         setShowLocationDropdown(true);
         setShowCategoryDropdown(false);
+        // Calculate fixed position from the input's bounding rect
+        if (locationRef.current) {
+            const rect = locationRef.current.getBoundingClientRect();
+            setLocDropPos({
+                top: rect.bottom + 8,
+                left: rect.left,
+                width: Math.max(rect.width, 300),
+            });
+        }
     };
 
     const handleSearch = (e: React.FormEvent) => {
@@ -177,9 +188,19 @@ const Home = () => {
                                 </div>
                             )}
 
-                            {/* ── Location Dropdown ── */}
-                            {showLocationDropdown && (
-                                <div ref={locDropRef} className="search-dropdown location-dropdown">
+                            {/* ── Location Dropdown — rendered via Portal to escape parent clipping ── */}
+                            {showLocationDropdown && createPortal(
+                                <div
+                                    ref={locDropRef}
+                                    className="search-dropdown location-dropdown"
+                                    style={{
+                                        position: 'fixed',
+                                        top: locDropPos.top,
+                                        left: locDropPos.left,
+                                        minWidth: locDropPos.width,
+                                        zIndex: 99999,
+                                    }}
+                                >
                                     <div className="loc-tabs">
                                         <button type="button" className={`loc-tab ${locationTab === 'departamento' ? 'active' : ''}`}
                                             onClick={() => setLocationTab('departamento')}>Departamento</button>
@@ -227,7 +248,8 @@ const Home = () => {
                                             })}
                                         </div>
                                     )}
-                                </div>
+                                </div>,
+                                document.body
                             )}
                         </form>
                     </div>
