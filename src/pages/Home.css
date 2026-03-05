@@ -262,10 +262,7 @@
 /* ── Location dropdown — tabs + bold list ────────── */
 .location-dropdown {
     padding: 0;
-    min-width: 300px;
-    max-height: 420px;
-    right: 0;
-    left: auto;
+    width: 280px;
     display: flex;
     flex-direction: column;
 }

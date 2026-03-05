@@ -198,7 +198,7 @@ const Home = () => {
                                         position: 'fixed',
                                         top: locDropPos.top,
                                         left: locDropPos.left,
-                                        minWidth: locDropPos.width,
+                                        width: '280px',
                                         maxHeight: locDropPos.maxHeight,
                                         zIndex: 99999,
                                         display: 'flex',
