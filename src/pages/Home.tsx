@@ -279,7 +279,7 @@ const Home = () => {
 
                 <div className="planning-cards-grid">
                     <div className="planning-row-top">
-                        <Link to="/directorio" className="planning-card wide-card">
+                        <Link to="/espacios" className="planning-card wide-card">
                             <div className="card-bg-img">
                                 <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800" alt="Espacios" />
                             </div>
@@ -321,7 +321,7 @@ const Home = () => {
                             <div className="card-icon">💡</div>
                         </Link>
 
-                        <Link to="/tools/planner" className="planning-card small-card">
+                        <Link to="/agenda" className="planning-card small-card">
                             <div className="card-content">
                                 <h3>Menú de planificación</h3>
                                 <p>Todo bajo control: Lista de tareas, Presupuestador, Organizador de mesas y ¡mucho más!</p>

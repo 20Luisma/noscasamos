@@ -1,0 +1,491 @@
+/* =====================================================
+   PRESUPUESTO PAGE
+   ===================================================== */
+
+.presupuesto-page {
+    width: 100%;
+    font-family: var(--font-body);
+}
+
+/* ─── HERO ─────────────────────────────────────────── */
+.pres-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 80px 8% 60px;
+    background: linear-gradient(135deg, #fff 50%, #fef0f0 100%);
+    min-height: 420px;
+}
+
+.pres-hero-left {
+    flex: 1;
+    max-width: 520px;
+}
+
+.pres-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.pres-breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.pres-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.pres-breadcrumb strong {
+    color: var(--text-main);
+}
+
+.pres-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+}
+
+.pres-hero-sub {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+}
+
+/* Budget input */
+.pres-budget-input-wrap {
+    margin-bottom: 1.8rem;
+}
+
+.pres-budget-input-wrap label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.pres-budget-input-row {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 340px;
+}
+
+.pres-currency {
+    padding: 0 0.75rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    border-right: 1px solid var(--border-color);
+}
+
+.pres-budget-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    color: var(--secondary);
+    background: transparent;
+}
+
+.pres-apply-btn {
+    border-radius: 0 !important;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Stats row */
+.pres-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    max-width: 440px;
+}
+
+.pres-stat {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 0.75rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pres-stat-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.pres-stat-val {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.pres-stat-est {
+    color: #6c63ff;
+}
+
+.pres-stat-paid {
+    color: #06d6a0;
+}
+
+.pres-stat-over {
+    color: #e63946;
+}
+
+.pres-stat-ok {
+    color: #06d6a0;
+}
+
+/* ─── CHART CARD ────────────────────────────────────── */
+.pres-hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.pres-chart-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 320px;
+    width: 100%;
+}
+
+.donut-svg {
+    overflow: visible;
+    transform: rotate(-90deg);
+}
+
+.donut-segment {
+    transition: stroke-dasharray 0.4s ease;
+}
+
+.donut-label-top {
+    font-size: 11px;
+    fill: var(--text-light);
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.donut-label-amount {
+    font-size: 15px;
+    font-weight: 700;
+    fill: var(--secondary);
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.pres-legend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.pres-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.pres-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.pres-legend-label {
+    flex: 1;
+    color: var(--text-main);
+}
+
+.pres-legend-amt {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+/* ─── FEATURES ──────────────────────────────────────── */
+.pres-features {
+    background: #fff;
+    border-top: 1px solid var(--border-light);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.pres-features-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pres-features h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.pres-features-sub {
+    font-size: 0.98rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.65;
+}
+
+.pres-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.pres-feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.pres-feature-emoji {
+    font-size: 2.8rem;
+}
+
+.pres-feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.pres-feature-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ─── TABLE ─────────────────────────────────────────── */
+.pres-table-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.pres-table-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.pres-table-wrap {
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pres-table-head,
+.pres-table-row,
+.pres-table-total {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.2fr 1.2fr 1.5fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.2rem;
+}
+
+.pres-table-head {
+    background: #fafafa;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.pres-table-row {
+    border-bottom: 1px solid #f5f5f5;
+    transition: background 0.15s;
+}
+
+.pres-table-row:hover {
+    background: #fef5f6;
+}
+
+.pres-table-row:last-child {
+    border-bottom: none;
+}
+
+.pres-table-total {
+    background: #fafafa;
+    border-top: 2px solid var(--border-light);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* Category cell */
+.pres-table-cat {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.pres-cat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.pres-cat-icon {
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+/* Editable amount field */
+.pres-table-field {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border-color);
+    border-radius: 7px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 140px;
+}
+
+.pres-currency-sm {
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border-right: 1px solid var(--border-color);
+}
+
+.pres-amount-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.88rem;
+    font-family: var(--font-body);
+    color: var(--secondary);
+    background: transparent;
+}
+
+/* Paid / Pending */
+.pres-table-paid {
+    font-size: 0.88rem;
+    color: #06d6a0;
+    font-weight: 600;
+}
+
+.pres-table-pending {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.pres-table-pending.pend {
+    color: #e07b5a;
+}
+
+.pres-table-pending.ok {
+    color: #06d6a0;
+}
+
+/* Pct bar */
+.pres-table-pct-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--text-light);
+}
+
+.pres-pct-bar {
+    flex: 1;
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    overflow: hidden;
+    min-width: 60px;
+}
+
+.pres-pct-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 960px) {
+    .pres-hero {
+        flex-direction: column;
+        padding: 5rem 2rem 3rem;
+    }
+
+    .pres-hero-left {
+        max-width: 100%;
+    }
+
+    .pres-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pres-table-head,
+    .pres-table-row,
+    .pres-table-total {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .pres-table-head span:nth-child(4),
+    .pres-table-head span:nth-child(5),
+    .pres-table-row>*:nth-child(4),
+    .pres-table-row>*:nth-child(5),
+    .pres-table-total span:nth-child(4),
+    .pres-table-total span:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .pres-hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

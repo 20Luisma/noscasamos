@@ -12,7 +12,7 @@
     min-height: 60vh;
     background: #fff;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .esp-hero-left {
@@ -34,6 +34,7 @@
     width: 60%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
 }
 
 .esp-hero-img {

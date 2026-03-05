@@ -8,10 +8,10 @@ const NAV_MENUS = [
     {
         label: 'Mi boda',
         items: [
-            { label: 'Agenda', to: '/directorio' },
-            { label: 'Presupuesto', to: '/directorio' },
+            { label: 'Agenda', to: '/agenda' },
+            { label: 'Presupuesto', to: '/presupuesto' },
             { label: 'Invitados', to: '/directorio' },
-            { label: 'Mesas', to: '/directorio' },
+            { label: 'Mesas', to: '/mesas' },
             { label: 'Web de boda', to: '/directorio' },
         ],
     },
