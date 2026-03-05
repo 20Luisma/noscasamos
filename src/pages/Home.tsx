@@ -92,14 +92,13 @@ const Home = () => {
     const openLocationDropdown = () => {
         setShowLocationDropdown(true);
         setShowCategoryDropdown(false);
-        // Calculate fixed position from the input's bounding rect
         if (locationRef.current) {
             const rect = locationRef.current.getBoundingClientRect();
             setLocDropPos({
                 top: rect.bottom + 8,
                 left: rect.left,
-                width: Math.max(rect.width, 300),
-                maxHeight: window.innerHeight - rect.bottom - 20,
+                width: 300,
+                maxHeight: 340,
             });
         }
     };
@@ -115,6 +114,7 @@ const Home = () => {
 
     return (
         <div className="home-page">
+
 
             {/* Hero */}
             <section className="hero">
@@ -213,16 +213,26 @@ const Home = () => {
                                     </div>
 
                                     {locationTab === 'departamento' && (
-                                        <div className="loc-list">
-                                            {filteredDepts.length > 0 ? filteredDepts.map((dept) => (
-                                                <button key={dept} type="button" className="loc-item"
-                                                    onClick={() => { setLocationQuery(dept); setShowLocationDropdown(false); }}>
-                                                    {dept}
-                                                </button>
-                                            )) : (
-                                                <p className="search-dropdown-empty">No se encontraron departamentos</p>
-                                            )}
-                                        </div>
+                                        <>
+                                            <style>{`
+                                                .loc-scroll::-webkit-scrollbar { width: 10px; background: #f5f5f5; }
+                                                .loc-scroll::-webkit-scrollbar-thumb { background: #c8264a; border-radius: 5px; }
+                                                .loc-scroll::-webkit-scrollbar-thumb:hover { background: #a01e3a; }
+                                            `}</style>
+                                            <div
+                                                className="loc-scroll"
+                                                style={{ maxHeight: '280px', overflowY: 'scroll', overflowX: 'hidden' }}
+                                            >
+                                                {filteredDepts.length > 0 ? filteredDepts.map((dept) => (
+                                                    <button key={dept} type="button" className="loc-item"
+                                                        onClick={() => { setLocationQuery(dept); setShowLocationDropdown(false); }}>
+                                                        {dept}
+                                                    </button>
+                                                )) : (
+                                                    <p className="search-dropdown-empty">No se encontraron departamentos</p>
+                                                )}
+                                            </div>
+                                        </>
                                     )}
 
                                     {locationTab === 'internacional' && (
