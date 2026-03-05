@@ -2,6 +2,8 @@
 
 > Plataforma MVP de bodas para Uruguay — inspirada en Bodas.net
 
+🌐 **Live:** [https://charming-concha-765c17.netlify.app](https://charming-concha-765c17.netlify.app)
+
 ## ¿Qué es?
 
 **noscasamos.uy** es un MVP (Producto Mínimo Viable) de una plataforma web para parejas que planifican su boda en Uruguay. Permite explorar proveedores, espacios de celebración y herramientas de planificación nupcial, todo localizado para el mercado uruguayo.
