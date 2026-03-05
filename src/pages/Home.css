@@ -263,8 +263,11 @@
 .location-dropdown {
     padding: 0;
     min-width: 300px;
+    max-height: 420px;
     right: 0;
     left: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Tab bar */
@@ -296,13 +299,44 @@
 
 /* Department list — height + scroll controlled via CSS */
 .loc-list {
-    max-height: 400px;
+    flex: 1;
     overflow-y: scroll;
-    padding-right: 2px;
-    /* Prevent scrollbar overlap */
-    /* Standard properties for Firefox */
-    scrollbar-color: #a0a0a0 #f1f1f1;
-    scrollbar-width: thin;
+    max-height: 340px;
+    /* Firefox */
+    scrollbar-color: rgba(200, 38, 74, 0.5) #f1f1f1;
+    scrollbar-width: auto;
+    /* Webkit — always visible, pink thumb */
+    position: relative;
+}
+
+.loc-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.loc-list::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.loc-list::-webkit-scrollbar-thumb {
+    background: rgba(200, 38, 74, 0.4);
+    border-radius: 3px;
+}
+
+.loc-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(200, 38, 74, 0.8);
+}
+
+/* Fade hint at bottom to show more items below */
+.loc-list::after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
+    display: block;
+    pointer-events: none;
 }
 
 .loc-item {

@@ -103,24 +103,6 @@ const Home = () => {
 
     return (
         <div className="home-page">
-            {/* Force permanent scrollbar in .loc-list regardless of macOS settings */}
-            <style>{`
-                .loc-list::-webkit-scrollbar {
-                    -webkit-appearance: none;
-                    width: 8px;
-                }
-                .loc-list::-webkit-scrollbar-track {
-                    background-color: #f1f1f1;
-                    border-radius: 4px;
-                }
-                .loc-list::-webkit-scrollbar-thumb {
-                    border-radius: 4px;
-                    background-color: rgba(0, 0, 0, 0.3);
-                }
-                .loc-list::-webkit-scrollbar-thumb:hover {
-                    background-color: rgba(200, 38, 74, 0.8);
-                }
-            `}</style>
 
             {/* Hero */}
             <section className="hero">
