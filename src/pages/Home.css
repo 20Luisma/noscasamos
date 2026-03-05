@@ -300,17 +300,18 @@
 /* Department list — height + scroll controlled via CSS */
 .loc-list {
     flex: 1;
+    min-height: 0;
+    /* CRITICAL: allows flex child to shrink and scroll */
     overflow-y: scroll;
-    max-height: 340px;
+    max-height: 320px;
     /* Firefox */
-    scrollbar-color: rgba(200, 38, 74, 0.5) #f1f1f1;
-    scrollbar-width: auto;
-    /* Webkit — always visible, pink thumb */
-    position: relative;
+    scrollbar-color: rgba(200, 38, 74, 0.6) #f1f1f1;
+    scrollbar-width: thin;
 }
 
 .loc-list::-webkit-scrollbar {
     width: 6px;
+    display: block;
 }
 
 .loc-list::-webkit-scrollbar-track {
@@ -318,25 +319,12 @@
 }
 
 .loc-list::-webkit-scrollbar-thumb {
-    background: rgba(200, 38, 74, 0.4);
+    background: rgba(200, 38, 74, 0.5);
     border-radius: 3px;
 }
 
 .loc-list::-webkit-scrollbar-thumb:hover {
-    background: rgba(200, 38, 74, 0.8);
-}
-
-/* Fade hint at bottom to show more items below */
-.loc-list::after {
-    content: '';
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 24px;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
-    display: block;
-    pointer-events: none;
+    background: rgba(200, 38, 74, 0.9);
 }
 
 .loc-item {

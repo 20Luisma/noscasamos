@@ -63,7 +63,7 @@ const Home = () => {
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
     const [locationTab, setLocationTab] = useState<'departamento' | 'internacional'>('departamento');
     const [openContinents, setOpenContinents] = useState<string[]>([]);
-    const [locDropPos, setLocDropPos] = useState({ top: 0, left: 0, width: 0 });
+    const [locDropPos, setLocDropPos] = useState({ top: 0, left: 0, width: 0, maxHeight: 380 });
 
     const searchRef = useRef<HTMLDivElement>(null);
     const locationRef = useRef<HTMLDivElement>(null);
@@ -99,6 +99,7 @@ const Home = () => {
                 top: rect.bottom + 8,
                 left: rect.left,
                 width: Math.max(rect.width, 300),
+                maxHeight: window.innerHeight - rect.bottom - 20,
             });
         }
     };
@@ -198,7 +199,10 @@ const Home = () => {
                                         top: locDropPos.top,
                                         left: locDropPos.left,
                                         minWidth: locDropPos.width,
+                                        maxHeight: locDropPos.maxHeight,
                                         zIndex: 99999,
+                                        display: 'flex',
+                                        flexDirection: 'column',
                                     }}
                                 >
                                     <div className="loc-tabs">
