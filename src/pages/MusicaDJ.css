@@ -1,0 +1,584 @@
+/* ══════════════════════════════════════════════════
+   MusicaDJ.css — noscasamos.uy
+══════════════════════════════════════════════════ */
+
+.musica-page {
+    min-height: 100vh;
+    background: #f9f8f6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ── HERO ──────────────────────────────────────── */
+.musica-hero {
+    display: flex;
+    min-height: 50vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    padding: 24px 0 0 0;
+    max-width: none;
+    margin: 0;
+}
+
+.musica-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    background: #fff;
+    padding: 20px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 100px 100px 0 / 0 50% 50% 0;
+}
+
+.musica-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.musica-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.musica-breadcrumb a:hover {
+    color: #c8264a;
+}
+
+.musica-breadcrumb strong {
+    color: #333;
+}
+
+.musica-breadcrumb span {
+    color: #bbb;
+}
+
+.musica-hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.musica-hero-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px 0 0;
+}
+
+/* Hero image */
+.musica-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+}
+
+.musica-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    display: block;
+}
+
+/* ── BODY ──────────────────────────────────────── */
+.musica-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    align-items: start;
+}
+
+/* ── SIDEBAR ───────────────────────────────────── */
+.musica-sidebar {
+    background: transparent;
+    padding: 8px 0;
+    position: sticky;
+    top: 80px;
+}
+
+.musica-filter-group {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.musica-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 8px;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.15s;
+}
+
+.musica-filter-toggle:hover {
+    color: #c8264a;
+}
+
+.musica-filter-body {
+    padding: 0 8px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Checkbox Style (Bodas.net Like) */
+.musica-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #444;
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+.musica-checkbox input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 1px solid #ccc;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.musica-checkbox input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    background-color: transparent;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.musica-checkbox input[type="checkbox"]:checked {
+    background-color: #c8264a;
+    border-color: #c8264a;
+}
+
+.musica-checkbox input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/* Toggle Switch Style (Filtros destacados) */
+.toggle-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filter-icon-left {
+    color: #888;
+}
+
+.toggle-switch {
+    width: 44px;
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-style input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-style input[type="checkbox"]:checked+.toggle-switch {
+    background-color: #c8264a;
+}
+
+.toggle-style input[type="checkbox"]:checked+.toggle-switch::after {
+    transform: translateX(20px);
+}
+
+/* ── MENU BUTTONS OVER LISTING ─────────────────── */
+.musica-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.musica-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 16px;
+}
+
+.musica-results-count {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #888;
+}
+
+.musica-view-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.musica-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.musica-view-btn.active {
+    background: #f5f5f5;
+    border-color: #ccc;
+    color: #1a1a1a;
+}
+
+.musica-view-btn:hover:not(.active) {
+    background: #fafafa;
+    border-color: #d0d0d0;
+}
+
+/* ── CARD (Bodas.net Style) ────────────────────── */
+.musica-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.musica-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.musica-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.musica-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.musica-card-img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.musica-card-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.musica-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.musica-card-dot.active {
+    background: #fff;
+    transform: scale(1.3);
+}
+
+.musica-fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.musica-fav-btn:hover {
+    transform: scale(1.1);
+}
+
+.musica-card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.musica-card-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+}
+
+.musica-card-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.musica-card-location strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.musica-card-desc {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.musica-card-bottom {
+    margin-top: 16px;
+}
+
+.musica-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 20px;
+}
+
+.musica-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.musica-meta-item .icon-wrapper {
+    color: #888;
+}
+
+.musica-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #c8264a;
+    background-color: transparent;
+}
+
+.discount-badge {
+    color: #e84c64;
+    font-weight: 700;
+}
+
+.musica-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.musica-btn-presupuesto {
+    background: #e84c64;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: auto;
+}
+
+.musica-btn-presupuesto:hover {
+    background: #d43b52;
+}
+
+.musica-responde {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: #e6a800;
+    font-weight: 500;
+}
+
+/* ── Cards: grid mode ──────────────────────────── */
+.musica-cards--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    flex-direction: unset;
+}
+
+.musica-cards--grid .musica-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+}
+
+.musica-cards--grid .musica-card-img {
+    height: 220px;
+    min-height: unset;
+}
+
+.musica-cards--grid .musica-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.musica-cards--grid .musica-card-actions {
+    align-items: stretch;
+}
+
+.musica-cards--grid .musica-btn-presupuesto {
+    width: 100%;
+}
+
+.musica-cards--grid .musica-responde {
+    justify-content: center;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1200px) {
+    .musica-hero-left {
+        width: 65%;
+    }
+
+    .musica-hero-right {
+        width: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+    .musica-hero {
+        flex-direction: column;
+    }
+
+    .musica-hero-left {
+        width: 100%;
+        border-radius: 0;
+        padding: 5rem 2rem 2rem;
+    }
+
+    .musica-hero-right {
+        position: relative;
+        width: 100%;
+        height: 280px;
+    }
+
+    .musica-body {
+        grid-template-columns: 1fr;
+    }
+
+    .musica-sidebar {
+        position: static;
+        margin-bottom: 24px;
+    }
+
+    .musica-card {
+        grid-template-columns: 1fr;
+    }
+
+    .musica-card-actions {
+        align-items: stretch;
+    }
+
+    .musica-btn-presupuesto {
+        width: 100%;
+    }
+
+    .musica-responde {
+        justify-content: center;
+    }
+}

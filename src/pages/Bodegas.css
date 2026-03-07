@@ -1,0 +1,557 @@
+/* ══════════════════════════════════════════════════
+   Bodegas.css — noscasamos.uy
+   Inspired by bodas.net listing layout
+══════════════════════════════════════════════════ */
+
+/* ── Page wrapper ──────────────────────────────── */
+.bod-page {
+    min-height: 100vh;
+    background: #f9f8f6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ── HERO ──────────────────────────────────────── */
+.bod-hero {
+    display: flex;
+    min-height: 60vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    max-width: none;
+    margin: 0;
+}
+
+.bod-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 52%;
+    background: #fff;
+    padding: 80px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+/* Breadcrumb */
+.bod-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.bod-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bod-breadcrumb a:hover {
+    color: #c8264a;
+}
+
+.bod-breadcrumb strong {
+    color: #333;
+}
+
+.bod-breadcrumb span {
+    color: #bbb;
+}
+
+/* Title */
+.bod-hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 24px;
+    line-height: 1.2;
+}
+
+/* Hero desc */
+.bod-hero-desc {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0;
+}
+
+/* Hero image */
+.bod-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.bod-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    display: block;
+}
+
+/* ── BODY ──────────────────────────────────────── */
+.bod-body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    align-items: start;
+}
+
+/* ── SIDEBAR ───────────────────────────────────── */
+.bod-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ebebeb;
+    padding: 8px 0;
+    position: sticky;
+    top: 80px;
+}
+
+.bod-clear-filters {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: #c8264a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.bod-clear-filters:hover {
+    opacity: 0.8;
+}
+
+.bod-filter-group {
+    border-top: 1px solid #f0f0f0;
+}
+
+.bod-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 20px;
+    background: none;
+    border: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+}
+
+.bod-filter-toggle:hover {
+    background: #fef6f8;
+}
+
+.bod-filter-body {
+    padding: 4px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bod-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #444;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.bod-checkbox input[type="checkbox"] {
+    accent-color: #c8264a;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.bod-checkbox.checked {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Price tabs */
+.bod-price-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.bod-price-tab {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.bod-price-tab.active {
+    background: #c8264a;
+    border-color: #c8264a;
+    color: #fff;
+    font-weight: 600;
+}
+
+.bod-price-tab:hover:not(.active) {
+    border-color: #c8264a;
+    color: #c8264a;
+}
+
+/* ── LISTING ───────────────────────────────────── */
+.bod-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.bod-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bod-results-count {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #888;
+}
+
+.bod-view-toggle {
+    display: flex;
+    gap: 4px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bod-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    background: #fff;
+    border: none;
+    font-size: 0.85rem;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.bod-view-btn.active {
+    background: #f5f5f5;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.bod-view-btn:hover:not(.active) {
+    background: #fafafa;
+}
+
+/* ── Cards: list mode ──────────────────────────── */
+.bod-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bod-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.bod-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Card image */
+.bod-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.bod-card-img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s;
+}
+
+.bod-card:hover .bod-card-img {
+    transform: scale(1.04);
+}
+
+/* Dots */
+.bod-card-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.bod-card-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.bod-card-dot.active {
+    background: #fff;
+}
+
+/* Fav button */
+.bod-fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.bod-fav-btn:hover {
+    background: rgba(0, 0, 0, 0.55);
+    transform: scale(1.1);
+}
+
+.bod-fav-btn.active {
+    background: rgba(200, 38, 74, 0.2);
+}
+
+/* Card info */
+.bod-card-info {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bod-card-info-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.bod-card-name {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+}
+
+.bod-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.bod-card-city {
+    color: #888;
+}
+
+.bod-card-desc {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Meta row */
+.bod-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bod-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.84rem;
+    color: #555;
+}
+
+.bod-meta-item svg {
+    color: #888;
+}
+
+.bod-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.83rem;
+    color: #c8264a;
+    font-weight: 600;
+}
+
+/* Actions row */
+.bod-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.bod-btn-presupuesto {
+    background: #c8264a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.bod-btn-presupuesto:hover {
+    background: #a51e3c;
+    transform: translateY(-1px);
+}
+
+.bod-responde {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+    color: #888;
+}
+
+/* ── Cards: grid mode ──────────────────────────── */
+.bod-cards--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    flex-direction: unset;
+}
+
+.bod-cards--grid .bod-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+}
+
+.bod-cards--grid .bod-card-img {
+    height: 220px;
+    min-height: unset;
+}
+
+.bod-cards--grid .bod-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1100px) {
+    .bod-hero-left {
+        width: 55%;
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .bod-hero {
+        flex-direction: column;
+    }
+
+    .bod-hero-left {
+        width: 100%;
+        border-radius: 0;
+        padding: 5rem 2rem 2rem;
+    }
+
+    .bod-hero-right {
+        position: relative;
+        width: 100%;
+        height: 260px;
+    }
+
+    .bod-body {
+        grid-template-columns: 1fr;
+    }
+
+    .bod-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .bod-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .bod-card {
+        grid-template-columns: 1fr;
+    }
+
+    .bod-card-img {
+        height: 200px;
+        min-height: unset;
+    }
+
+    .bod-body {
+        gap: 16px;
+        padding-top: 16px;
+    }
+}

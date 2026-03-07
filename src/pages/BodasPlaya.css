@@ -1,0 +1,531 @@
+/* ══════════════════════════════════════════════════
+   BodasPlaya.css — noscasamos.uy
+══════════════════════════════════════════════════ */
+
+.playa-page {
+    min-height: 100vh;
+    background: #f9f8f6;
+    font-family: 'Inter', sans-serif;
+}
+
+.playa-hero {
+    display: flex;
+    min-height: 60vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    max-width: none;
+    margin: 0;
+}
+
+.playa-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 52%;
+    background: #fff;
+    padding: 80px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+.playa-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.playa-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.playa-breadcrumb a:hover {
+    color: #c8264a;
+}
+
+.playa-breadcrumb strong {
+    color: #333;
+}
+
+.playa-breadcrumb span {
+    color: #bbb;
+}
+
+.playa-hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 24px;
+    line-height: 1.2;
+}
+
+.playa-hero-desc {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0;
+}
+
+.playa-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.playa-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    display: block;
+}
+
+.playa-body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    align-items: start;
+}
+
+.playa-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ebebeb;
+    padding: 8px 0;
+    position: sticky;
+    top: 80px;
+}
+
+.playa-clear-filters {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: #c8264a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.playa-clear-filters:hover {
+    opacity: 0.8;
+}
+
+.playa-filter-group {
+    border-top: 1px solid #f0f0f0;
+}
+
+.playa-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 20px;
+    background: none;
+    border: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+}
+
+.playa-filter-toggle:hover {
+    background: #fef6f8;
+}
+
+.playa-filter-body {
+    padding: 4px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.playa-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #444;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.playa-checkbox input[type="checkbox"] {
+    accent-color: #c8264a;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.playa-checkbox.checked {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.playa-price-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.playa-price-tab {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.playa-price-tab.active {
+    background: #c8264a;
+    border-color: #c8264a;
+    color: #fff;
+    font-weight: 600;
+}
+
+.playa-price-tab:hover:not(.active) {
+    border-color: #c8264a;
+    color: #c8264a;
+}
+
+.playa-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.playa-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.playa-results-count {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #888;
+}
+
+.playa-view-toggle {
+    display: flex;
+    gap: 4px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.playa-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    background: #fff;
+    border: none;
+    font-size: 0.85rem;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.playa-view-btn.active {
+    background: #f5f5f5;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.playa-view-btn:hover:not(.active) {
+    background: #fafafa;
+}
+
+.playa-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.playa-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.playa-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.playa-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.playa-card-img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s;
+}
+
+.playa-card:hover .playa-card-img {
+    transform: scale(1.04);
+}
+
+.playa-card-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.playa-card-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.playa-card-dot.active {
+    background: #fff;
+}
+
+.playa-fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.playa-fav-btn:hover {
+    background: rgba(0, 0, 0, 0.55);
+    transform: scale(1.1);
+}
+
+.playa-fav-btn.active {
+    background: rgba(200, 38, 74, 0.2);
+}
+
+.playa-card-info {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playa-card-name {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+}
+
+.playa-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.playa-card-city {
+    color: #888;
+}
+
+.playa-card-desc {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.playa-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.playa-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.84rem;
+    color: #555;
+}
+
+.playa-meta-item svg {
+    color: #888;
+}
+
+.playa-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.83rem;
+    color: #c8264a;
+    font-weight: 600;
+}
+
+.playa-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.playa-btn-presupuesto {
+    background: #c8264a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.playa-btn-presupuesto:hover {
+    background: #a51e3c;
+    transform: translateY(-1px);
+}
+
+.playa-responde {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+    color: #888;
+}
+
+.playa-cards--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    flex-direction: unset;
+}
+
+.playa-cards--grid .playa-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+}
+
+.playa-cards--grid .playa-card-img {
+    height: 220px;
+    min-height: unset;
+}
+
+.playa-cards--grid .playa-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+@media (max-width: 1100px) {
+    .playa-hero-left {
+        width: 55%;
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .playa-hero {
+        flex-direction: column;
+    }
+
+    .playa-hero-left {
+        width: 100%;
+        border-radius: 0;
+        padding: 5rem 2rem 2rem;
+    }
+
+    .playa-hero-right {
+        position: relative;
+        width: 100%;
+        height: 260px;
+    }
+
+    .playa-body {
+        grid-template-columns: 1fr;
+    }
+
+    .playa-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .playa-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .playa-card {
+        grid-template-columns: 1fr;
+    }
+
+    .playa-card-img {
+        height: 200px;
+        min-height: unset;
+    }
+
+    .playa-body {
+        gap: 16px;
+        padding-top: 16px;
+    }
+}
