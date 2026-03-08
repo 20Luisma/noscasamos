@@ -1,0 +1,719 @@
+.comp-page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* ── HERO SECTION ── */
+/* Re-creating the Espacios-style hero specifically for Talleres to ensure correct styling */
+
+.esp-hero {
+    display: flex;
+    min-height: 55vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.esp-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    background: #fff;
+    padding: 60px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+.esp-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.esp-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.esp-hero-title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.esp-hero-sub {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+.esp-search-bar {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    overflow: visible;
+    /* Changed from hidden to show dropdown */
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.esp-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.8rem 1rem;
+}
+
+.esp-search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #333;
+    width: 100%;
+}
+
+.esp-search-icon {
+    color: #888;
+    flex-shrink: 0;
+}
+
+.esp-search-divider {
+    width: 1px;
+    background: #ddd;
+    margin: 0.8rem 0;
+}
+
+.btn.esp-search-btn {
+    border-radius: 0 4px 4px 0 !important;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+}
+
+.esp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.esp-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.esp-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.esp-breadcrumb strong {
+    color: #333;
+}
+
+/* Usamos las clases de EspaciosCelebracion (esp-hero, etc.) pero forzons el botón oscuro */
+.search-btn-dark {
+    background-color: #2a2a2a !important;
+    border-color: #2a2a2a !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.search-btn-dark:hover {
+    background-color: #1a1a1a !important;
+}
+
+/* Modificadores para el dropdown de categorias en el hero */
+.search-category-wrap {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 650px;
+    max-width: 90vw;
+}
+
+.category-dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cat-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cat-header-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-icon {
+    color: #e5405e;
+}
+
+.cat-sub-item {
+    background: none;
+    border: none;
+    padding: 2px 0 2px 26px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-sub-item:hover {
+    color: #e5405e;
+    text-decoration: underline;
+}
+
+/* ── BODY LAYOUT ── */
+.comp-body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 15px;
+    /* Reduced from 30px */
+    align-items: start;
+}
+
+/* ── SIDEBAR FILTERS ── */
+.comp-sidebar {
+    background: transparent;
+}
+
+.comp-filter-group {
+    border-bottom: 1px solid #eaeaea;
+    padding: 24px 0;
+}
+
+.comp-filter-group:first-child {
+    padding-top: 0;
+}
+
+.comp-filter-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.toggle-title-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+}
+
+.toggle-title-left svg {
+    color: #666;
+}
+
+.comp-filter-body {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.comp-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.comp-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.comp-checkbox input[type="checkbox"]::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    background-color: white;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.comp-checkbox input[type="checkbox"]:checked {
+    background-color: #e5405e;
+    border-color: #e5405e;
+}
+
+.comp-checkbox input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/* Toggle Switch Style */
+.toggle-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    font-size: 15px;
+}
+
+.filter-icon-left {
+    color: #777;
+}
+
+/* Nuevo Toggle Bodas.net */
+.toggle-switch-nuevo {
+    width: 44px;
+    height: 24px;
+    background: #ddd;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-switch-nuevo::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch-nuevo input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-style input:checked+.toggle-switch-nuevo {
+    background: #e5405e;
+}
+
+.toggle-style input:checked+.toggle-switch-nuevo::after {
+    left: 22px;
+}
+
+/* Static Nav for Categories */
+.static-nav .nav-item {
+    padding: 10px 12px 10px 24px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.static-nav .nav-item:hover {
+    color: #e5405e;
+    background: transparent;
+}
+
+.static-nav .nav-item.active {
+    font-weight: bold;
+    color: #333;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* ── LISTING HEADER ── */
+.comp-listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comp-results-count {
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+}
+
+.comp-view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.comp-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comp-view-btn:hover {
+    background: #f1f1f1;
+}
+
+.comp-view-btn.active {
+    background: #f1f1f1;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ── LISTING CARDS (LIST VIEW) ── */
+.comp-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comp-card {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    height: 240px;
+    min-height: 240px;
+    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+}
+
+.comp-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comp-card-img-wrap {
+    width: 320px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.comp-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.comp-fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.comp-card-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 10;
+}
+
+.comp-card-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.comp-card-dot.active {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.comp-card-info {
+    padding: 16px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comp-card-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.comp-card-name {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    /* Increased from 20px */
+    color: #333;
+    font-weight: bold;
+}
+
+.comp-card-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    /* Increased from 13px */
+    color: #666;
+}
+
+.comp-card-desc {
+    font-size: 15px;
+    /* Increased from 14px */
+    color: #555;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+}
+
+.comp-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.comp-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comp-meta-item {
+    font-size: 15px;
+    /* Increased from 14px */
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-wrapper {
+    color: #777;
+}
+
+.comp-meta-promo {
+    font-size: 14px;
+    /* Increased from 13px */
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.discount-badge {
+    background: #ffeeef;
+    color: #e5405e;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.comp-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.comp-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: #e5405e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.comp-btn-presupuesto:hover {
+    background: #d1304d;
+}
+
+.comp-responde {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ── GRID VIEW OVERRIDES ── */
+.comp-cards--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.comp-cards--grid .comp-card {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+}
+
+.comp-cards--grid .comp-card-img-wrap {
+    width: 100%;
+    height: 220px;
+}
+
+.comp-cards--grid .comp-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.comp-cards--grid .comp-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.comp-cards--grid .comp-card-actions {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.comp-cards--grid .comp-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .comp-hero {
+        flex-direction: column;
+    }
+
+    .comp-hero-left,
+    .comp-hero-right {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .comp-hero-left::after {
+        display: none;
+    }
+
+    .comp-hero-right {
+        height: 200px;
+    }
+
+    .comp-body {
+        grid-template-columns: 1fr;
+    }
+
+    .comp-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .comp-card-img-wrap {
+        width: 100%;
+        height: 220px;
+    }
+
+    .comp-card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .comp-card-actions {
+        align-items: stretch;
+    }
+}

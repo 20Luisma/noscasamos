@@ -1,0 +1,586 @@
+/* =====================
+   COMPLEMENTOS NOVIO CSS
+   (Inherits similar structure to maintain consistency)
+===================== */
+
+.comp-page {
+    background-color: var(--bg-soft);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Base sections and grid styling */
+/* ── HERO SECTION ── */
+.esp-hero {
+    display: flex;
+    min-height: 55vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.esp-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    background: #fff;
+    padding: 60px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+.esp-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.esp-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.esp-hero-title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.esp-hero-sub {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+.esp-search-bar {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    overflow: visible;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.esp-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.8rem 1rem;
+}
+
+.esp-search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #333;
+    width: 100%;
+}
+
+.esp-search-icon {
+    color: #888;
+    flex-shrink: 0;
+}
+
+.esp-search-divider {
+    width: 1px;
+    background: #ddd;
+    margin: 0.8rem 0;
+}
+
+.btn.esp-search-btn {
+    border-radius: 0 4px 4px 0 !important;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+}
+
+.esp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.esp-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.esp-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.esp-breadcrumb strong {
+    color: #333;
+}
+
+.search-btn-dark {
+    background-color: #2a2a2a !important;
+    border-color: #2a2a2a !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.search-btn-dark:hover {
+    background-color: #1a1a1a !important;
+}
+
+.search-category-wrap {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 650px;
+    max-width: 90vw;
+}
+
+.category-dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cat-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cat-header-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-icon {
+    color: #e5405e;
+}
+
+.cat-sub-item {
+    background: none;
+    border: none;
+    padding: 2px 0 2px 26px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-sub-item:hover {
+    color: #e5405e;
+    text-decoration: underline;
+}
+
+/* Base sections and grid styling */
+.comp-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 2rem;
+}
+
+.comp-sidebar {
+    width: 255px;
+    flex-shrink: 0;
+    margin-top: -20px;
+}
+
+.comp-filter-group {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0;
+}
+
+.comp-filter-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    padding: 0;
+    font-family: var(--font-body);
+}
+
+.comp-filter-body {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comp-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.comp-listing {
+    flex: 1;
+}
+
+.comp-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.comp-results-count {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+}
+
+.comp-view-toggle {
+    display: flex;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.comp-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border-color);
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.comp-view-btn:last-child {
+    border-right: none;
+}
+
+.comp-view-btn:hover {
+    background: #fcfcfc;
+    color: var(--text-main);
+}
+
+.comp-view-btn.active {
+    background: #f7f7f7;
+    color: var(--primary);
+    font-weight: 600;
+    box-shadow: inset 0 2px 0 var(--primary);
+}
+
+.comp-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comp-card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    height: 250px;
+}
+
+.comp-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.comp-card-img-wrap {
+    flex: 0 0 330px;
+    width: 330px;
+    height: 100%;
+    position: relative;
+}
+
+.comp-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comp-card-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.comp-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comp-card-dot.active {
+    background: #ffffff;
+    transform: scale(1.3);
+}
+
+.comp-fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 2;
+    transition: transform 0.15s;
+}
+
+.comp-fav-btn:hover {
+    transform: scale(1.1);
+}
+
+.comp-card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.comp-card-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.comp-card-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    font-family: var(--font-body);
+}
+
+.comp-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.comp-card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.comp-card-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.comp-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.comp-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.comp-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.comp-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.comp-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #e5425a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.comp-btn-presupuesto:hover {
+    background-color: #d13047;
+}
+
+.comp-responde {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+    color: var(--text-main);
+}
+
+.comp-cards--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.comp-cards--grid .comp-card {
+    width: calc(50% - 10px);
+    height: auto;
+    flex-direction: column;
+}
+
+.comp-cards--grid .comp-card-img-wrap {
+    width: 100%;
+    height: 220px;
+}
+
+.comp-cards--grid .comp-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.comp-cards--grid .comp-card-actions {
+    width: 100%;
+    align-items: stretch;
+}
+
+.comp-cards--grid .comp-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .comp-cards--grid .comp-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .comp-body {
+        flex-direction: column;
+    }
+
+    .comp-sidebar {
+        width: 100%;
+        display: none;
+    }
+
+    .comp-listing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .comp-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .comp-card-img-wrap {
+        width: 100%;
+        height: 220px;
+    }
+
+    .comp-card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .comp-card-actions {
+        align-items: stretch;
+    }
+}

@@ -469,6 +469,8 @@
 }
 
 .autos-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #e84c64;
     color: #fff;
     border: none;
@@ -522,6 +524,8 @@
 }
 
 .autos-cards--grid .autos-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -575,6 +579,8 @@
     }
 
     .autos-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
         width: 100%;
     }
 

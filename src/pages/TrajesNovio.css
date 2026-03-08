@@ -1,0 +1,740 @@
+/* =====================
+   TRAJES DE NOVIO PAGE STYLES
+===================== */
+
+.trajes-page {
+    background-color: var(--bg-soft);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* ── Hero Section ── */
+.esp-hero {
+    display: flex;
+    min-height: 55vh;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.esp-hero-left {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    background: #fff;
+    padding: 60px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 80px 80px 0 / 0 50% 50% 0;
+}
+
+.esp-hero-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.esp-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.esp-hero-title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.esp-search-bar {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    overflow: visible;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.esp-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.8rem 1rem;
+}
+
+.esp-search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #333;
+    width: 100%;
+}
+
+.esp-search-icon {
+    color: #888;
+    flex-shrink: 0;
+}
+
+.esp-search-divider {
+    width: 1px;
+    background: #ddd;
+    margin: 0.8rem 0;
+}
+
+.btn.esp-search-btn {
+    border-radius: 0 4px 4px 0 !important;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+}
+
+.esp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.esp-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.esp-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.esp-breadcrumb strong {
+    color: #333;
+}
+
+.search-btn-dark {
+    background-color: #e5425a !important;
+    /* Changed to red/pink like Bodas.net for this page */
+    border-color: #e5425a !important;
+    color: white !important;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.search-btn-dark:hover {
+    background-color: #d13047 !important;
+}
+
+/* Category dropdown */
+.search-category-wrap {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 650px;
+    max-width: 90vw;
+}
+
+.category-dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cat-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cat-header-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-icon {
+    color: #e5405e;
+}
+
+.cat-sub-item {
+    background: none;
+    border: none;
+    padding: 2px 0 2px 26px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cat-sub-item:hover {
+    color: #e5405e;
+    text-decoration: underline;
+}
+
+/* ── Body Layout ── */
+.trajes-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 2rem;
+}
+
+/* ── Sidebar Filters ── */
+.trajes-sidebar {
+    width: 255px;
+    /* Bodas.net typical sidebar width */
+    flex-shrink: 0;
+    margin-top: -20px;
+}
+
+.trajes-filter-group {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0;
+}
+
+.trajes-filter-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    padding: 0;
+    font-family: var(--font-body);
+}
+
+.toggle-title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trajes-filter-body {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Category Sidebar Links */
+.static-nav .nav-item {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 14.5px;
+    padding: 0 0 0 28px;
+    transition: color 0.15s;
+    margin-bottom: -2px;
+    /* tighter spacing */
+}
+
+.static-nav .nav-item:hover {
+    color: var(--primary);
+}
+
+.static-nav .nav-item.active {
+    font-weight: 700;
+}
+
+/* Standard Checkboxes */
+.trajes-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.trajes-checkbox input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.trajes-checkbox input[type="checkbox"]:checked {
+    background-color: #fff;
+    border-color: var(--primary);
+}
+
+.trajes-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Toggle Switch Style Checkboxes (Destacados) */
+.toggle-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-icon-left {
+    color: #666;
+}
+
+.trophy-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.toggle-switch-nuevo {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #e5e5e5;
+    border-radius: 12px;
+    transition: background-color 0.2s;
+}
+
+.toggle-switch-nuevo input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin: 0;
+}
+
+.toggle-switch-nuevo::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-style input:checked+.toggle-switch-nuevo {
+    background-color: var(--primary);
+}
+
+.toggle-style input:checked+.toggle-switch-nuevo::after {
+    transform: translateX(20px);
+}
+
+
+/* ── Listing Area ── */
+.trajes-listing {
+    flex: 1;
+}
+
+.trajes-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.trajes-results-count {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+}
+
+.trajes-view-toggle {
+    display: flex;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.trajes-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border-color);
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.trajes-view-btn:last-child {
+    border-right: none;
+}
+
+.trajes-view-btn:hover {
+    background: #fcfcfc;
+    color: var(--text-main);
+}
+
+.trajes-view-btn.active {
+    background: #f7f7f7;
+    color: var(--primary);
+    font-weight: 600;
+    box-shadow: inset 0 2px 0 var(--primary);
+}
+
+/* ── Cards List View ── */
+.trajes-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trajes-card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    min-height: 250px;
+}
+
+.trajes-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Image Wrapper */
+.trajes-card-img-wrap {
+    width: 330px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.trajes-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #d1a93e;
+    /* Gold color */
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.trajes-card-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.trajes-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.trajes-card-dot.active {
+    background: #ffffff;
+    transform: scale(1.3);
+}
+
+.trajes-fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 2;
+    transition: transform 0.15s;
+}
+
+.trajes-fav-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Card Info */
+.trajes-card-info {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.trajes-card-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.trajes-card-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    font-family: var(--font-body);
+}
+
+.trajes-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.trajes-card-location strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.trajes-card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: auto;
+    /* Multiline truncation (max 2 lines) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trajes-card-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.trajes-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.trajes-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.icon-wrapper {
+    color: #888;
+    display: flex;
+}
+
+.trajes-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.discount-badge {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.trajes-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.trajes-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #e5425a;
+    /* Bodas.net typical red button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.trajes-btn-presupuesto:hover {
+    background-color: #d13047;
+}
+
+.trajes-responde {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+    color: var(--text-main);
+}
+
+/* ── Grid View Override ── */
+.trajes-cards--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.trajes-cards--grid .trajes-card {
+    width: calc(50% - 10px);
+    min-height: auto;
+    flex-direction: column;
+}
+
+.trajes-cards--grid .trajes-card-img-wrap {
+    width: 100%;
+    height: 220px;
+}
+
+.trajes-cards--grid .trajes-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.trajes-cards--grid .trajes-card-actions {
+    width: 100%;
+    align-items: stretch;
+}
+
+.trajes-cards--grid .trajes-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .trajes-cards--grid .trajes-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .trajes-body {
+        flex-direction: column;
+    }
+
+    .trajes-sidebar {
+        width: 100%;
+        display: none;
+        /* In production, move to a mobile filter modal */
+    }
+
+    .trajes-listing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .trajes-card {
+        min-height: auto;
+        flex-direction: column;
+    }
+
+    .trajes-card-img-wrap {
+        width: 100%;
+        height: 220px;
+    }
+
+    .trajes-card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .trajes-card-actions {
+        align-items: stretch;
+    }
+}

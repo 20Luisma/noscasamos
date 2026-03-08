@@ -22,7 +22,7 @@
 
 .viajes-hero-left {
     position: relative;
-    z-index: 2;
+    z-index: 100;
     width: 60%;
     background: #fff;
     padding: 20px 5% 60px 8%;
@@ -487,6 +487,8 @@
 }
 
 .viajes-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #e84c64;
     color: #fff;
     border: none;
@@ -540,6 +542,8 @@
 }
 
 .viajes-cards--grid .viajes-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -593,6 +597,8 @@
     }
 
     .viajes-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
         width: 100%;
     }
 

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
 :root {
   /* Bodas.net Style Palette */
-  --primary: #e03b53;
+  --primary: #e5405e;
   /* bodas.net red/pink */
   --primary-light: #fdd8dd;
-  --primary-dark: #c0283d;
+  --primary-dark: #d13047;
   --secondary: #222222;
   /* Very dark for headings */
 

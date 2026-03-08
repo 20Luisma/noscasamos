@@ -1,0 +1,457 @@
+/* Registrate Page Styles */
+.registrate-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.registrate-header {
+    background: #fff;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.registrate-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.registrate-logo .heart-icon {
+    color: #f62f5e;
+    margin-right: 8px;
+    font-size: 28px;
+}
+
+/* Main Container Layout */
+.registrate-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.registrate-box {
+    display: flex;
+    background: #fff;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* LEFT SIDE: Banner */
+.registrate-banner {
+    flex: 1;
+    max-width: 45%;
+    position: relative;
+    /* Usando una imagen de pareja de novios en lugar de unos vasos en una mesa */
+    background-image: url('https://st5.depositphotos.com/77483880/65866/i/450/depositphotos_658662704-stock-photo-beautiful-young-girl-swing-her.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    /* Alinea el contenido abajo en lugar de al centro */
+    justify-content: center;
+    padding-bottom: 80px;
+    /* Dale espacio desde el borde inferior */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Degradado oscuro para que resalte el texto blanco */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-text-script {
+    font-family: 'Brush Script MT', 'Great Vibes', cursive, serif;
+    font-size: 52px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 0.8;
+    color: #ffffff;
+}
+
+.banner-text-highlight {
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: normal;
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+}
+
+/* Pink swoosh background effect behind text */
+.banner-text-highlight::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 110%;
+    height: 35px;
+    background: #f62f5e;
+    z-index: -1;
+    transform: translateY(-40%) rotate(-2deg);
+    opacity: 0.9;
+}
+
+.banner-text-sub {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* RIGHT SIDE: Form */
+.registrate-form-section {
+    flex: 1;
+    padding: 40px;
+    background: #fff;
+}
+
+/* Social Buttons */
+.social-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.btn-social:hover {
+    background: #fcfcfc;
+}
+
+.social-icon {
+    position: absolute;
+    left: 20px;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    z-index: 1;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 15px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Form Fields */
+.registrate-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-col {
+    flex: 1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select.select-country {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px 10px 0;
+    font-size: 14px;
+    color: #333;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-bottom-color: #f62f5e;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+/* Icons inside inputs */
+.input-icon-right {
+    position: relative;
+}
+
+.input-icon-right .input-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.btn-toggle-password {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Custom Select Dropdown arrow styling implicitly handled by browser for now, simple approach */
+
+/* Roles Selector */
+.role-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.role-label {
+    color: #777;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-label input[type="radio"]:checked+.radio-custom {
+    border-color: #f62f5e;
+}
+
+.radio-label input[type="radio"]:checked+.radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background: #f62f5e;
+    border-radius: 50%;
+}
+
+.radio-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin-bottom: 25px;
+}
+
+.check-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 12px;
+    color: #666;
+}
+
+.check-label input[type="checkbox"] {
+    display: none;
+}
+
+.check-custom {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.check-label input[type="checkbox"]:checked+.check-custom {
+    background-color: #f62f5e;
+    border-color: #f62f5e;
+}
+
+.check-label input[type="checkbox"]:checked+.check-custom::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+}
+
+.check-text a {
+    color: #666;
+    text-decoration: underline;
+}
+
+.check-text a:hover {
+    color: #f62f5e;
+}
+
+/* Submit Button */
+.btn-submit-register {
+    background-color: #e5405e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-submit-register:hover {
+    background-color: #d1304d;
+}
+
+/* Footer link */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.link-accede {
+    color: #e5405e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-accede:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .registrate-box {
+        flex-direction: column;
+    }
+
+    .registrate-banner {
+        max-width: 100%;
+        min-height: 250px;
+    }
+
+    .banner-text-script {
+        font-size: 42px;
+    }
+
+    .banner-text-highlight {
+        font-size: 32px;
+    }
+
+    .registrate-form-section {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .role-selector {
+        flex-wrap: wrap;
+    }
+}

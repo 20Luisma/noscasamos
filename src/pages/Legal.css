@@ -1,0 +1,88 @@
+/* =====================
+   LEGAL PAGES STYLES
+   (Shared across Privacidad, Términos, Cookies)
+===================== */
+
+.legal-page {
+    background-color: var(--bg-soft, #f8f9fa);
+    padding: 80px 0 120px;
+    min-height: calc(100vh - 400px);
+}
+
+.legal-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.legal-header h1 {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    color: var(--secondary, #333);
+    margin-bottom: 15px;
+}
+
+.legal-update {
+    color: #666;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legal-content-card {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.legal-text {
+    font-family: var(--font-body, 'Jost', sans-serif);
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.legal-text h2 {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 1.6rem;
+    color: var(--secondary, #333);
+    margin: 40px 0 20px;
+    border-bottom: 1px solid var(--border-light, #f2f2f2);
+    padding-bottom: 10px;
+}
+
+.legal-text h2:first-child {
+    margin-top: 0;
+}
+
+.legal-text p {
+    margin-bottom: 20px;
+}
+
+.legal-text ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.legal-text li {
+    margin-bottom: 8px;
+}
+
+.legal-text a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.legal-text a:hover {
+    text-decoration-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .legal-content-card {
+        padding: 40px 25px;
+    }
+}

@@ -1,0 +1,502 @@
+/* Acceso Empresas PRO styles */
+.acceso-empresas-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Custom header that overrides or sits on top */
+.pro-header {
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.pro-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pro-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+}
+
+.heart-icon {
+    color: #f62f5e;
+    font-size: 26px;
+    margin-right: 8px;
+}
+
+.pro-badge {
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.pro-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.pro-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.pro-nav a.active {
+    padding-bottom: 23px;
+    border-bottom: 3px solid #f62f5e;
+}
+
+/* Hero Section */
+.pro-hero {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    padding: 80px 0;
+    min-height: 500px;
+}
+
+.pro-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.pro-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pro-hero-text {
+    color: #ffffff;
+    max-width: 600px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.pro-hero-text h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.pro-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.pro-benefits li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.btn-pro-register {
+    background-color: #f62f5e;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pro-register:hover {
+    background-color: #d8244f;
+}
+
+.pro-login-box {
+    background: rgba(30, 45, 30, 0.85);
+    padding: 35px;
+    border-radius: 8px;
+    width: 380px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.pro-login-box h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pro-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.input-icon {
+    padding: 0 15px;
+    color: #666;
+    border-right: 1px solid #eee;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    padding: 14px 15px;
+    outline: none;
+    font-size: 15px;
+}
+
+.btn-pro-login {
+    background-color: #f62f5e;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Three columns steps */
+.pro-steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 20px;
+    gap: 40px;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.pro-step {
+    flex: 1;
+}
+
+.step-icon {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.pro-step h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pro-step p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Offerings section */
+.pro-offerings-wrapper {
+    background-color: #fff;
+    padding: 60px 0 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.offerings-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.offerings-list {
+    flex: 1;
+    max-width: 450px;
+}
+
+.offering-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.offering-icon {
+    margin-right: 25px;
+    color: #777;
+    min-width: 40px;
+}
+
+.offering-item p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+}
+
+.offerings-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Simple CSS mockup of laptop to avoid external image deps that may break */
+.mockup-placeholder {
+    position: relative;
+    width: 450px;
+    height: 300px;
+}
+
+.mockup-laptop {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    background: #000;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.laptop-screen {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.laptop-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.laptop-body {
+    background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.laptop-base {
+    position: absolute;
+    bottom: -15px;
+    left: -20px;
+    right: -20px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 0 0 15px 15px;
+}
+
+.mockup-phone {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 200px;
+    background: #fff;
+    border: 5px solid #eaeaea;
+    border-radius: 15px;
+    box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Management Menu */
+.pro-management {
+    padding: 60px 20px 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.management-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.management-stats-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.stat-icon {
+    color: #555;
+    font-size: 20px;
+}
+
+.stat-value {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.stat-meta {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.management-features {
+    flex: 1;
+}
+
+.mgmt-feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.mgmt-icon {
+    color: #999;
+    margin-right: 20px;
+}
+
+.mgmt-feature-item p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Bottom CTA Banner */
+.pro-cta-banner {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1542744094-24638ea0b3b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.pro-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.pro-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.pro-cta-content h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pro-hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .pro-hero-text {
+        margin-bottom: 40px;
+    }
+
+    .pro-benefits li {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .pro-steps {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .offerings-content,
+    .management-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .offerings-image {
+        margin-top: 30px;
+    }
+}

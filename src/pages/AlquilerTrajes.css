@@ -1,0 +1,379 @@
+/* =====================
+   ALQUILER DE TRAJES CSS
+   (Inherits similar structure from TrajesNovio)
+===================== */
+
+.alquiler-page {
+    background-color: var(--bg-soft);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Base sections and grid styling identical to trajes-novio */
+.alquiler-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 2rem;
+}
+
+.alquiler-sidebar {
+    width: 255px;
+    flex-shrink: 0;
+    margin-top: -20px;
+}
+
+.alquiler-filter-group {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0;
+}
+
+.alquiler-filter-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    padding: 0;
+    font-family: var(--font-body);
+}
+
+.alquiler-filter-body {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alquiler-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.alquiler-listing {
+    flex: 1;
+}
+
+.alquiler-listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.alquiler-results-count {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+}
+
+.alquiler-view-toggle {
+    display: flex;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.alquiler-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border-color);
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.alquiler-view-btn:last-child {
+    border-right: none;
+}
+
+.alquiler-view-btn:hover {
+    background: #fcfcfc;
+    color: var(--text-main);
+}
+
+.alquiler-view-btn.active {
+    background: #f7f7f7;
+    color: var(--primary);
+    font-weight: 600;
+    box-shadow: inset 0 2px 0 var(--primary);
+}
+
+.alquiler-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.alquiler-card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    height: 250px;
+}
+
+.alquiler-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.alquiler-card-img-wrap {
+    flex: 0 0 330px;
+    width: 330px;
+    height: 100%;
+    position: relative;
+}
+
+.alquiler-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alquiler-card-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.alquiler-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.alquiler-card-dot.active {
+    background: #ffffff;
+    transform: scale(1.3);
+}
+
+.alquiler-fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 2;
+    transition: transform 0.15s;
+}
+
+.alquiler-fav-btn:hover {
+    transform: scale(1.1);
+}
+
+.alquiler-card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.alquiler-card-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.alquiler-card-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    font-family: var(--font-body);
+}
+
+.alquiler-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.alquiler-card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.alquiler-card-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.alquiler-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.alquiler-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.alquiler-meta-promo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.alquiler-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.alquiler-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #e5425a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.alquiler-btn-presupuesto:hover {
+    background-color: #d13047;
+}
+
+.alquiler-responde {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+    color: var(--text-main);
+}
+
+.alquiler-cards--grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.alquiler-cards--grid .alquiler-card {
+    width: calc(50% - 10px);
+    height: auto;
+    flex-direction: column;
+}
+
+.alquiler-cards--grid .alquiler-card-img-wrap {
+    width: 100%;
+    height: 220px;
+}
+
+.alquiler-cards--grid .alquiler-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.alquiler-cards--grid .alquiler-card-actions {
+    width: 100%;
+    align-items: stretch;
+}
+
+.alquiler-cards--grid .alquiler-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .alquiler-cards--grid .alquiler-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .alquiler-body {
+        flex-direction: column;
+    }
+
+    .alquiler-sidebar {
+        width: 100%;
+        display: none;
+    }
+
+    .alquiler-listing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .alquiler-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .alquiler-card-img-wrap {
+        width: 100%;
+        height: 220px;
+    }
+
+    .alquiler-card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .alquiler-card-actions {
+        align-items: stretch;
+    }
+}

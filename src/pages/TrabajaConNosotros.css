@@ -1,0 +1,248 @@
+/* =====================
+   TRABAJA CON NOSOTROS STYLES
+===================== */
+
+.trabaja-page {
+    background-color: var(--bg-soft, #f8f9fa);
+    padding-bottom: 80px;
+}
+
+/* ── Hero ── */
+.trabaja-hero {
+    position: relative;
+    padding: 120px 0 100px;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--primary-light, #fdd8dd);
+    /* Soft pink background */
+}
+
+.trabaja-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trabaja-hero-title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.trabaja-hero-subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.trabaja-hero .hero-btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+}
+
+.trabaja-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.45;
+    mix-blend-mode: multiply;
+}
+
+/* ── Cultura / Beneficios ── */
+.trabaja-cultura {
+    padding: 100px 0;
+}
+
+.cultura-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.cultura-header h2 {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.cultura-header p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.cultura-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.cultura-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cultura-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cultura-icon {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.cultura-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cultura-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ── Imagen Team ── */
+.trabaja-gallery {
+    margin-top: -20px;
+    margin-bottom: 80px;
+}
+
+.team-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Posiciones / List ── */
+.trabaja-posiciones {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.posiciones-title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.jobs-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(229, 64, 94, 0.08);
+}
+
+.job-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.job-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.job-tag {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    background: var(--bg-muted);
+    color: #555;
+    border-radius: 100px;
+    font-weight: 500;
+}
+
+.job-tag.department {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.apply-btn {
+    white-space: nowrap;
+}
+
+.spontaneous-application {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--border-color);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spontaneous-application p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.mailto-link {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mailto-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .cultura-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .apply-btn {
+        width: 100%;
+    }
+}

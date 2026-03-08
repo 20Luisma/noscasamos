@@ -1,0 +1,464 @@
+/* =====================
+   PROMOCIONES PAGE STYLES
+===================== */
+
+.promo-page {
+    background-color: var(--bg-soft);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* ── Breadcrumbs ── */
+.promo-breadcrumb-wrap {
+    padding: 1.5rem 0;
+    background-color: #ffffff;
+}
+
+.promo-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.promo-breadcrumb a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.promo-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.promo-breadcrumb span {
+    color: #ccc;
+}
+
+.promo-breadcrumb strong {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* ── Hero Banner ── */
+.promo-hero {
+    position: relative;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.promo-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.promo-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.promo-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.promo-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.promo-hero-title {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+/* Hero Search Bar */
+.promo-search-bar {
+    background: #ffffff;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.promo-select-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.promo-select-wrap select {
+    width: 100%;
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
+    cursor: pointer;
+}
+
+.promo-select-wrap select:focus {
+    color: var(--primary);
+}
+
+.promo-select-icon {
+    position: absolute;
+    right: 15px;
+    color: var(--primary);
+    pointer-events: none;
+}
+
+.promo-search-divider {
+    width: 1px;
+    background: #e5e5e5;
+    margin: 0.5rem 0;
+}
+
+/* ── Tabs Wrapper ── */
+.promo-tabs-wrapper {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+.promo-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.promo-tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 1.5rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.promo-tab.active {
+    border-bottom-color: var(--primary);
+}
+
+.promo-tab-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+}
+
+.promo-tab-icon-wrap.basic {
+    background: #ffffff;
+}
+
+/* Circle Icon for 'Todos' */
+.circle-border-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px dashed #666;
+    border-radius: 50%;
+}
+
+.tab-icon {
+    color: #666;
+}
+
+/* Exclusive Tab Icon */
+.promo-tab-icon-wrap.exclusive {
+    background: #e48135;
+    /* Similar to bodas.net orange */
+}
+
+.promo-tab-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.promo-tab-text strong {
+    font-weight: 600;
+}
+
+.promo-tab-text span {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-left: 0.2rem;
+}
+
+/* ── Main Content ── */
+.promo-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.promo-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.promo-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ── Grid ── */
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* ── Cards ── */
+.promo-card {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.promo-card-top {
+    position: relative;
+    height: 190px;
+    width: 100%;
+}
+
+.promo-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-card-badge {
+    position: absolute;
+    bottom: -18px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.badge-orange {
+    background: #e48135;
+    /* Bodas.net Orange badge */
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.badge-white {
+    background: #fff;
+    color: #333;
+    border: 1px solid #e5e5e5;
+}
+
+.badge-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+/* Card Body */
+.promo-card-body {
+    padding: 1.5rem 1.25rem 1rem;
+    flex: 1;
+}
+
+.promo-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.text-exclusive {
+    color: #e48135;
+}
+
+.text-grey {
+    color: #999999;
+}
+
+.promo-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.promo-date {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #888;
+    font-size: 0.825rem;
+}
+
+/* Card Footer */
+.promo-card-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.promo-vendor-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-bottom: 0.15rem;
+}
+
+.promo-vendor-cat {
+    font-size: 0.8rem;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Pagination ── */
+.promo-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.page-btn:hover:not(.dots) {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.page-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.page-btn.dots {
+    border: none;
+    background: transparent;
+    cursor: default;
+}
+
+.page-btn.next {
+    width: auto;
+    padding: 0 1rem;
+    gap: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .promo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-hero {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .promo-hero-title {
+        font-size: 2rem;
+    }
+
+    .promo-search-bar {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .promo-select-wrap select {
+        padding: 1rem;
+    }
+
+    .promo-search-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+
+    .promo-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 1rem;
+    }
+
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+}

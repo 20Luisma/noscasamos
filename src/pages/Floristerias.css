@@ -471,6 +471,8 @@
 }
 
 .flores-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #e84c64;
     color: #fff;
     border: none;
@@ -524,6 +526,8 @@
 }
 
 .flores-cards--grid .flores-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -577,6 +581,8 @@
     }
 
     .flores-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
         width: 100%;
     }
 

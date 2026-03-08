@@ -98,6 +98,14 @@
     border-bottom-color: var(--primary);
 }
 
+button.nav-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
+}
+
 /* ========================================
    DROPDOWN PANEL
 ======================================== */
@@ -240,6 +248,81 @@
     }
 
     /* Hide desktop right panel on mobile */
+    .navbar-right {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .navbar-center {
+        position: fixed;
+        top: 72px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 72px);
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+    }
+
+    .navbar-center.open {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dropdown-panel {
+        position: static;
+        box-shadow: none;
+        padding: 1rem 0 0 1rem;
+        border-bottom: none;
+        display: block;
+        animation: none;
+    }
+
+    .dropdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .dropdown-columns {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Make the title invisible or smaller on mobile to save space */
+    .dropdown-title {
+        display: none;
+    }
+
+    .mobile-auth-section {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .dropdown-backdrop {
+        display: none;
+    }
+
     .navbar-right {
         display: none;
     }

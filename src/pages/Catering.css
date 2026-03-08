@@ -468,6 +468,8 @@
 }
 
 .cat-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #e84c64;
     color: #fff;
     border: none;
@@ -521,6 +523,8 @@
 }
 
 .cat-cards--grid .cat-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -574,6 +578,8 @@
     }
 
     .cat-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
         width: 100%;
     }
 

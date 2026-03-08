@@ -519,6 +519,8 @@
 }
 
 .rest-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #c8264a;
     color: #fff;
     border: none;

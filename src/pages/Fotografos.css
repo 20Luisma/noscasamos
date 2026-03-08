@@ -483,6 +483,8 @@
 }
 
 .foto-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     background: #e84c64;
     color: #fff;
     border: none;
@@ -536,6 +538,8 @@
 }
 
 .foto-cards--grid .foto-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -589,6 +593,8 @@
     }
 
     .foto-btn-presupuesto {
+    white-space: nowrap;
+    flex-shrink: 0;
         width: 100%;
     }
 
