@@ -1,20 +1,51 @@
 /* =====================================================
-   WEB DE BODA PAGE
+   WEB DE BODA - LANDING PAGE
    ===================================================== */
 
-.webboda-page {
+.webboda-landing {
     width: 100%;
     font-family: var(--font-body);
+    background-color: #fff;
+}
+
+.webboda-landing a {
+    text-decoration: none;
+}
+
+.bg-light {
+    background-color: #fcf8f8;
 }
 
 /* ─── HERO ─────────────────────────────────────────── */
-.wb-hero {
+.wb-landing-hero {
+    position: relative;
+    padding: 80px 8% 6rem;
+    background: #fff;
+    overflow: hidden;
+    min-height: 520px;
+}
+
+.wb-landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: #fcebe9;
+    border-bottom-left-radius: 400px;
+    z-index: 0;
+}
+
+.wb-hero-content {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding: 80px 8% 60px;
-    background: linear-gradient(135deg, #fff 50%, #fef0f0 100%);
-    min-height: 400px;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+    /* Above the background curve */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .wb-hero-left {
@@ -28,7 +59,7 @@
     gap: 0.5rem;
     font-size: 0.85rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .wb-breadcrumb a {
@@ -44,548 +75,846 @@
     color: var(--text-main);
 }
 
-.wb-hero-title {
+.wb-landing-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 4vw, 3rem);
     color: var(--secondary);
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     line-height: 1.15;
 }
 
-.wb-hero-sub {
-    font-size: 1rem;
+.wb-landing-sub {
+    font-size: 1.05rem;
     color: var(--text-light);
-    line-height: 1.65;
-    margin-bottom: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-.wb-cta {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-bottom: 1rem;
+/* Register Box */
+.wb-register-box {
+    margin-top: 2rem;
 }
 
-.wb-login-hint {
-    font-size: 0.9rem;
+.wb-register-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     color: var(--text-light);
-    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
-.wb-link {
+.wb-register-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+.wb-input-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.wb-input-wrap input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    font-family: inherit;
+    font-size: 1.05rem;
+}
+
+.wb-input-icon {
+    color: #ccc;
+    font-size: 1.15rem;
+    margin-left: 0.5rem;
+}
+
+.wb-btn-register {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 8px !important;
+    font-weight: 700;
+    font-size: 1.05rem;
+    background-color: var(--primary) !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.wb-btn-register:hover {
+    background-color: #d1304f !important;
+}
+
+/* Register Footer */
+.wb-register-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.wb-social-reg {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.wb-social-icons {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.wb-social-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border-light);
+    background: #fff;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.wb-social-btn:hover {
+    background: #f5f5f5;
+}
+
+.wb-login-link {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.wb-login-link strong a {
     color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
+    margin-left: 0.3rem;
 }
 
-.wb-link:hover {
+.wb-login-link strong a:hover {
     text-decoration: underline;
 }
 
-/* ─── DEVICES ───────────────────────────────────────── */
+/* Hero Right Graphics */
 .wb-hero-right {
     flex: 1;
     display: flex;
     justify-content: center;
-}
-
-.wb-devices {
     position: relative;
-    width: 340px;
-    height: 220px;
+    height: 480px;
 }
 
-.wb-tablet-wrap {
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.15));
-}
-
-.wb-tablet {
-    width: 220px;
-    height: 165px;
-    border-radius: 10px;
-    border: 3px solid #ddd;
-    overflow: hidden;
-    background: #fff;
-}
-
-.wb-t-nav {
-    height: 18px;
+.wb-hero-graphic {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 8px;
 }
 
-.wb-t-hero {
-    height: 80px;
+.wb-mock-laptop {
+    width: 480px;
+    height: 320px;
+    background: #111;
+    /* Changed to dark back to match */
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 0px;
+    top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
+    overflow: visible;
+    border: 1px solid #333;
+    /* Darker border */
 }
 
-.wb-phone-wrap {
+.wb-mock-laptop::after {
+    content: '';
     position: absolute;
-    right: 0;
-    bottom: 0;
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.18));
+    bottom: -15px;
+    left: -20px;
+    right: -20px;
+    height: 15px;
+    background: #1a1a1a;
+    /* Changed to dark grey/black */
+    border-radius: 0 0 16px 16px;
+    box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow */
 }
 
-.wb-phone {
+.wb-mock-laptop::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
-    height: 160px;
+    height: 5px;
+    background: #333;
+    /* Darker indentation */
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+}
+
+.wb-mock-browser {
+    height: 30px;
+    background: #111;
+    /* Changed to nearly black */
+    border-bottom: 1px solid #333;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+}
+
+.wb-mock-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.wb-mock-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.wb-mock-dots span:nth-child(1) {
+    background: #ff5f56;
+}
+
+.wb-mock-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.wb-mock-dots span:nth-child(3) {
+    background: #27c93f;
+}
+
+.wb-mock-url {
+    background: #222;
+    /* Darker bg for contrast against black browser */
+    border: 1px solid #444;
+    /* Darker border */
     border-radius: 10px;
-    border: 3px solid #ddd;
-    overflow: hidden;
-}
-
-/* ─── FEATURES ──────────────────────────────────────── */
-.wb-features {
-    background: #fff;
-    border-top: 1px solid var(--border-light);
-    padding: 5rem 2rem;
+    font-size: 10px;
+    color: #bbb;
+    /* Lighter text color */
+    padding: 2px 15px;
+    flex: 1;
     text-align: center;
-}
-
-.wb-features-inner {
-    max-width: 1000px;
+    max-width: 250px;
     margin: 0 auto;
 }
 
-.wb-features h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
-    color: var(--secondary);
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.3;
+.wb-mock-screen {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
-.wb-feat-sub {
-    font-size: 0.98rem;
-    color: var(--text-light);
-    max-width: 560px;
-    margin: 0 auto 3rem;
+.wb-mock-title-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    /* Reduced to keep text inside the screen */
+}
+
+.wb-mock-title-overlay h1 {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    /* Slightly larger */
+    font-weight: 700;
+    /* Bolder */
+    letter-spacing: 3px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 1px 5px rgba(0, 0, 0, 0.8);
+    /* Stronger shadow */
+    margin: 0;
+}
+
+.wb-mock-mobile {
+    width: 160px;
+    height: 320px;
+    background: #fff;
+    border: 6px solid #1a1a1a;
+    border-radius: 24px;
+    box-shadow: -10px 15px 35px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.wb-mock-m-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 15px;
+    background: #1a1a1a;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+}
+
+.wb-mock-m-screen {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.wb-mock-title-overlay.m-vertical {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.7) 100%);
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.wb-mock-title-overlay.m-vertical h2 {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+.wb-mock-title-overlay.m-vertical p {
+    color: #eee;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* ─── FEATURES ──────────────────────────────────────── */
+
+.wb-features-sec {
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.wb-features-inner h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.wb-features-desc {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
     line-height: 1.6;
 }
 
 .wb-features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
-.wb-feature-card {
+.wb-feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    text-align: center;
+    padding: 1rem;
 }
 
-.wb-feat-emoji {
-    font-size: 2.8rem;
-}
-
-.wb-feature-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--secondary);
-}
-
-.wb-feature-card p {
-    font-size: 0.88rem;
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-/* ─── TEMPLATE GALLERY ──────────────────────────────── */
-.wb-templates {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-.wb-section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    color: var(--secondary);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0.75rem;
-}
-
-.wb-section-sub {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.6;
-}
-
-.wb-tpl-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.tpl-card {
-    cursor: pointer;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 2px solid var(--border-light);
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-.tpl-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
-}
-
-.tpl-card.selected {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(200, 38, 74, 0.15);
-}
-
-.tpl-preview {
-    position: relative;
-    height: 180px;
+.wb-feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.tpl-fake-nav {
-    height: 22px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    flex-shrink: 0;
-}
-
-.tpl-fake-hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
-.tpl-fake-names {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-.tpl-fake-date {
-    font-size: 8px;
-    margin: 0;
-}
-
-.tpl-fake-body {
-    padding: 8px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.tpl-fake-line {
-    height: 4px;
-    border-radius: 2px;
-}
-
-.tpl-fake-line.short {
-    width: 60%;
-}
-
-.tpl-selected-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: var(--primary);
-    color: #fff;
-    font-size: 0.68rem;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 20px;
-}
-
-.tpl-name {
-    text-align: center;
-    font-size: 0.88rem;
-    font-weight: 600;
+.wb-feature-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
     color: var(--secondary);
-    padding: 0.6rem 0;
-    margin: 0;
-    background: #fff;
 }
 
-/* ─── EDITOR ────────────────────────────────────────── */
-.wb-editor {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 2rem 5rem;
+.wb-feature-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
-.wb-editor-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+/* ─── TEMPLATES PREVIEW ──────────────────────────────── */
+
+.wb-templates-preview {
+    padding: 5rem 0;
+}
+
+.wb-templates-sub {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 1rem auto 3.5rem;
+    line-height: 1.6;
+}
+
+.wb-template-cards {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
-    align-items: start;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
-/* Form */
-.wb-form {
-    background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 16px;
-    padding: 1.8rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.wb-form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.wb-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.wb-field label {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-light);
-}
-
-.wb-field input,
-.wb-field textarea {
-    border: 1.5px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.92rem;
-    font-family: var(--font-body);
-    color: var(--secondary);
-    outline: none;
-    transition: border-color 0.2s;
-    resize: vertical;
-}
-
-.wb-field input:focus,
-.wb-field textarea:focus {
-    border-color: var(--primary);
-}
-
-/* Share row */
-.wb-share-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: #fafafa;
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    padding: 0.6rem 0.8rem;
-}
-
-.wb-share-url {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    flex: 1;
-    font-size: 0.8rem;
-    color: var(--text-light);
+.wb-t-card {
+    width: 300px;
+    height: 420px;
+    border-radius: 12px;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border: 8px solid #fff;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.wb-copy-btn {
-    background: var(--primary);
+.wb-t-card.primary {
+    width: 320px;
+    height: 450px;
+    z-index: 2;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.wb-t-card:hover {
+    transform: translateY(-5px);
+}
+
+.wb-t-card.primary:hover {
+    transform: translateY(-15px);
+}
+
+
+.wb-t-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.wb-t-overlay {
+    position: absolute;
+    top: 20%;
+    /* Moved higher up */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #1a1a1a;
+    /* Solid dark text */
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    /* Crisp white outline instead of blur */
+}
+
+.wb-t-overlay h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    /* Extra bold */
+    margin: 0;
+}
+
+.wb-t-overlay.dark {
+    color: #fff;
+    /* White text for the center one */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 2px 5px rgba(0, 0, 0, 0.8);
+    /* Strong drop shadow for contrast */
+}
+
+.wb-more-btn-elegant {
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #111;
     color: #fff;
     border: none;
-    border-radius: 6px;
-    padding: 0.4rem 0.9rem;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 4rem;
     cursor: pointer;
-    white-space: nowrap;
-    transition: background 0.2s;
-    font-family: var(--font-body);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.wb-copy-btn:hover {
-    background: #a01e3a;
+.wb-more-btn-elegant span {
+    margin-left: 0.8rem;
+    transition: transform 0.3s;
+    display: inline-block;
 }
 
-/* Live preview */
-.wb-preview-wrap {
-    position: sticky;
-    top: 80px;
+.wb-more-btn-elegant:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-.wb-preview-label {
+.wb-more-btn-elegant:hover span {
+    transform: translateX(6px);
+}
+
+
+/* ─── ALTERNATE SECTIONS ────────────────────────────── */
+
+.wb-alt-sec {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.wb-alt-inner {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-light);
-    margin-bottom: 0.75rem;
+    gap: 4rem;
 }
 
-.wb-preview-site {
-    border: 2px solid var(--border-light);
-    border-radius: 14px;
+.wb-alt-inner.reverse {
+    flex-direction: row-reverse;
+}
+
+.wb-alt-text {
+    flex: 1;
+}
+
+.wb-alt-text h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.wb-alt-text p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.wb-alt-action {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.wb-alt-action:hover {
+    border-bottom-color: var(--primary);
+}
+
+.wb-alt-mockup-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Base Phone Mockup Container */
+.wb-mockup-phone {
+    width: 280px;
+    height: 560px;
+    background-color: #f7f7f7;
+    border: 12px solid #1f1f1f;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    min-height: 380px;
+}
+
+.wb-mockup-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background-color: #1f1f1f;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 10;
+}
+
+.wb-mockup-screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-.wb-ps-nav {
+/* Fake Mobile Status Bar */
+.wb-mockup-header {
+    height: 44px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    z-index: 5;
+}
+
+.wb-mockup-status {
+    display: flex;
+    gap: 4px;
+}
+
+/* Fake App Navigation Bar */
+.wb-mockup-app-bar {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    flex-shrink: 0;
+    padding: 0 15px;
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
 }
 
-.wb-ps-nav-links {
-    display: flex;
-    gap: 0.75rem;
-    font-size: 0.7rem;
+.wb-mockup-menu-icon {
+    width: 20px;
+    height: 2px;
+    background: #333;
+    position: relative;
 }
 
-.wb-ps-hero {
-    flex: 0 0 auto;
-    padding: 2.5rem 1.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    text-align: center;
+.wb-mockup-menu-icon::before,
+.wb-mockup-menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #333;
 }
 
-.wb-ps-heart {
-    margin-bottom: 0.25rem;
+.wb-mockup-menu-icon::before {
+    top: -6px;
 }
 
-.wb-ps-hero h3 {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0;
-    letter-spacing: 1px;
+.wb-mockup-menu-icon::after {
+    top: 6px;
 }
 
-.wb-ps-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    font-size: 0.8rem;
+.wb-mockup-logo {
+    font-size: 1.2rem;
+    color: var(--primary);
 }
 
-.wb-ps-meta span {
+.wb-mockup-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    font-size: 12px;
 }
 
-.wb-ps-body {
+.wb-mockup-content {
     flex: 1;
-    padding: 1.2rem 1.5rem;
+    overflow-y: hidden;
+    position: relative;
+    background: #fdfdfd;
+}
+
+/* Mockup Content Styling */
+.m-wb-hero {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: flex-end;
+    /* Move content lower */
     align-items: center;
-    background: rgba(255, 255, 255, 0.6);
-}
-
-.wb-ps-msg {
-    font-size: 0.85rem;
+    color: #fff;
     text-align: center;
-    line-height: 1.6;
-    margin: 0;
-    font-style: italic;
+    padding-bottom: 25px;
+    /* Give it some breathing room at the bottom */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    /* Make sure white text pops */
 }
 
-.wb-ps-rsvp {
-    padding: 0.6rem 1.8rem;
+.m-wb-hero h2 {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    /* Force white color */
+}
+
+.m-wb-hero p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    color: #fff;
+    /* Force white color */
+}
+
+.m-wb-body {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.m-wb-body h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.m-wb-body p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.m-wb-btn {
+    width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 6px;
-    font-size: 0.88rem;
+    background: #f0f0f0;
+    color: #333;
     font-weight: 600;
-    cursor: pointer;
-    font-family: var(--font-body);
-    transition: opacity 0.2s;
 }
 
-.wb-ps-rsvp:hover {
-    opacity: 0.85;
+.m-wb-btn.primary {
+    background: var(--primary);
+    color: #fff;
 }
+
+.m-wb-header-bar {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.m-wb-header-bar strong {
+    flex: 1;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.m-wb-settings {
+    padding: 20px;
+}
+
+.m-wb-field {
+    margin-bottom: 15px;
+}
+
+.m-wb-field label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.m-wb-input {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
 
 /* ─── RESPONSIVE ─────────────────────────────────────── */
+
 @media (max-width: 960px) {
-    .wb-hero {
+    .wb-hero-content {
         flex-direction: column;
-        padding: 5rem 2rem 3rem;
+        gap: 2rem;
     }
 
     .wb-hero-left {
         max-width: 100%;
+        text-align: center;
+    }
+
+    .wb-breadcrumb {
+        justify-content: center;
+    }
+
+    .wb-register-inputs {
+        align-items: center;
+    }
+
+    .wb-register-footer {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .wb-features-grid {
         grid-template-columns: 1fr;
     }
 
-    .wb-tpl-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .wb-alt-inner,
+    .wb-alt-inner.reverse {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .wb-editor-body {
-        grid-template-columns: 1fr;
-    }
 
-    .wb-preview-wrap {
-        position: static;
-    }
-}
-
-@media (max-width: 500px) {
-    .wb-tpl-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .wb-form-row {
-        grid-template-columns: 1fr;
-    }
 }

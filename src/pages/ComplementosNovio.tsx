@@ -299,6 +299,7 @@ export default function ComplementosNovio() {
                                 <Link to="/alquiler-trajes" className="nav-item">Alquiler Trajes</Link>
                                 <Link to="/complementos-novio" className="nav-item active">Complementos novio</Link>
                                 <Link to="/directorio" className="nav-item">Cuidado masculino</Link>
+                                <Link to="/promociones" className="nav-item" style={{ fontWeight: 'bold', color: '#f8b400' }}>Promociones</Link>
                             </div>
                         )}
                     </div>

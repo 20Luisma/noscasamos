@@ -326,7 +326,7 @@ export default function ComplementosNovia() {
                                 <Link to="/complementos-novia" className="nav-item active">Complementos novia</Link>
                                 <Link to="/joyeria" className="nav-item">Joyería</Link>
                                 <Link to="/belleza-novias" className="nav-item">Belleza Novias</Link>
-                                <Link to="/promociones" className="nav-item" style={{ fontWeight: 'bold' }}>Promociones</Link>
+                                <Link to="/promociones" className="nav-item" style={{ fontWeight: 'bold', color: '#f8b400' }}>Promociones</Link>
                             </div>
                         )}
                     </div>

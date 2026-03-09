@@ -1,0 +1,194 @@
+.portal-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: var(--font-body, 'Jost', sans-serif);
+    background: #111;
+}
+
+.portal-side {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10vh;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Background Images */
+.portal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+    z-index: 0;
+}
+
+.portal-side.bodas .portal-bg {
+    background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=2069');
+    background-position: 90% center;
+}
+
+.portal-side.quince .portal-bg {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/6054d264054df05f4abf5bad/858d079c-dedf-4e17-a7a2-d8ba185f446c/Quinceaneras_01.jpg');
+}
+
+/* Overlays for readability */
+.portal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.portal-side.bodas .portal-overlay {
+    background: linear-gradient(to bottom, rgba(229, 64, 94, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+.portal-side.quince .portal-overlay {
+    background: linear-gradient(to bottom, rgba(162, 89, 255, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+/* Content Wrapper */
+.portal-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    transition: transform 0.4s ease;
+}
+
+.portal-logo {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.portal-side.bodas .portal-logo {
+    color: #fff;
+}
+
+.portal-side.quince .portal-logo {
+    color: #fff;
+}
+
+.portal-desc {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+.portal-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.portal-side.bodas .portal-btn {
+    background: var(--primary, #e5405e);
+    border: 2px solid var(--primary, #e5405e);
+    color: white;
+}
+
+.portal-side.quince .portal-btn {
+    background: #a259ff;
+    border: 2px solid #a259ff;
+    color: white;
+}
+
+/* --- Hover Effects --- */
+.portal-side:hover {
+    flex: 1.5;
+}
+
+.portal-side:hover .portal-bg {
+    transform: scale(1.05);
+}
+
+.portal-side:hover .portal-overlay {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.portal-side:hover .portal-content {
+    transform: translateY(-10px);
+}
+
+.portal-side.bodas:hover .portal-btn {
+    background: white;
+    color: var(--primary, #e5405e);
+}
+
+.portal-side.quince:hover .portal-btn {
+    background: white;
+    color: #a259ff;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .portal-container {
+        flex-direction: column;
+    }
+
+    .portal-side {
+        width: 100%;
+        height: 50vh;
+        padding-bottom: 6vh;
+    }
+
+    .portal-side:hover {
+        flex: 1.2;
+    }
+
+    .portal-logo {
+        font-size: 2.5rem;
+    }
+
+    .portal-desc {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .portal-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}

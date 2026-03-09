@@ -314,6 +314,7 @@ export default function CuidadoMasculino() {
                                 <Link to="/alquiler-trajes" className="nav-item">Alquiler Trajes</Link>
                                 <Link to="/complementos-novio" className="nav-item">Complementos novio</Link>
                                 <Link to="/cuidado-masculino" className="nav-item active">Cuidado masculino</Link>
+                                <Link to="/promociones" className="nav-item" style={{ fontWeight: 'bold', color: '#f8b400' }}>Promociones</Link>
                             </div>
                         )}
                     </div>

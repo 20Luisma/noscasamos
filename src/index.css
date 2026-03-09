@@ -217,7 +217,6 @@ a {
   color: var(--text-light);
 }
 
-/* Section Label */
 .section-label {
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -227,4 +226,101 @@ a {
   color: var(--primary);
   margin-bottom: 0.75rem;
   display: block;
+}
+
+/* ─── TOOLBOX (Global for all landing pages) ───────────────────────────────────────── */
+.agenda-toolbox-sec {
+  padding: 5rem 0 8rem;
+  background-color: #fafafa;
+}
+
+.agenda-toolbox-sec h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.agenda-toolbox-sub {
+  color: var(--text-light);
+  margin-bottom: 3rem;
+}
+
+.toolbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.toolbox-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toolbox-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.toolbox-icon-wrap {
+  margin-bottom: 1.2rem;
+}
+
+.toolbox-icon-wrap.blue {
+  color: #3b82f6;
+}
+
+.toolbox-icon-wrap.pink {
+  color: var(--primary);
+}
+
+.toolbox-icon-wrap.blue-dark {
+  color: #2563eb;
+}
+
+.toolbox-icon-wrap.orange {
+  color: #f97316;
+}
+
+.toolbox-icon-wrap.cyan {
+  color: #06b6d4;
+}
+
+.toolbox-card h3 {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+.toolbox-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.toolbox-action {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.toolbox-action:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
 }

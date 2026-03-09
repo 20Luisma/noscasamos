@@ -1,20 +1,42 @@
 /* =====================================================
-   ORGANIZADOR DE MESAS PAGE
+   ORGANIZADOR DE MESAS - LANDING PAGE
    ===================================================== */
 
-.mesas-page {
+.mesas-landing {
     width: 100%;
     font-family: var(--font-body);
 }
 
 /* ─── HERO ─────────────────────────────────────────── */
-.mesas-hero {
+.mesas-landing-hero {
+    position: relative;
+    padding: 90px 8% 6rem;
+    background: #fff;
+    overflow: hidden;
+    min-height: 520px;
+}
+
+.mesas-landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: #fcebe9;
+    border-bottom-left-radius: 400px;
+    z-index: 0;
+}
+
+.mesas-hero-content {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding: 80px 8% 60px;
-    background: linear-gradient(135deg, #fff 50%, #fef0f0 100%);
-    min-height: 380px;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+    /* Above the background curve */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .mesas-hero-left {
@@ -28,7 +50,7 @@
     gap: 0.5rem;
     font-size: 0.85rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .mesas-breadcrumb a {
@@ -44,545 +66,455 @@
     color: var(--text-main);
 }
 
-.mesas-hero-title {
+.mesas-landing-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
     color: var(--secondary);
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.2rem;
     line-height: 1.15;
 }
 
-.mesas-hero-sub {
-    font-size: 1rem;
+.mesas-landing-sub {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+/* Form Styles */
+.mesas-register-box {
+    margin-top: 1rem;
+}
+
+.mesas-register-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     color: var(--text-light);
-    line-height: 1.65;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.8rem;
+    display: block;
 }
 
-.mesas-hero-stats {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.mesas-stat {
+.mesas-register-inputs {
     display: flex;
     flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.mesas-input-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
     align-items: center;
     background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 10px;
-    padding: 0.7rem 1.2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    min-width: 90px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
-.mesas-stat strong {
-    font-size: 1.2rem;
-    color: var(--primary);
-    font-weight: 700;
+.mesas-input-wrap input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    font-family: inherit;
+    font-size: 1.05rem;
 }
 
-.mesas-stat span {
-    font-size: 0.72rem;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-top: 2px;
+.mesas-input-wrap input:focus {
+    border: none;
+    outline: none;
 }
 
-.mesas-cta {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
+.mesas-input-wrap input::placeholder {
+    color: #aaa;
 }
 
-/* ─── HERO PREVIEW ──────────────────────────────────── */
+.mesas-input-icon {
+    color: #ccc;
+    font-size: 1.15rem;
+    margin-left: 0.5rem;
+}
+
+.mesas-btn-register {
+    width: 100%;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    border-radius: 8px !important;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background-color: var(--primary) !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.mesas-btn-register:hover {
+    background-color: #d1304f !important;
+}
+
+.mesas-register-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 1rem;
+}
+
+.mesas-social-reg {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-main);
+}
+
+.mesas-social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mesas-social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.mesas-social-btn:hover {
+    background: #f9f9f9;
+}
+
+.mesas-login-link {
+    color: var(--text-main);
+}
+
+.mesas-login-link strong {
+    cursor: pointer;
+}
+
+.mesas-login-link strong:hover {
+    text-decoration: underline;
+}
+
+/* Hero Graphic Side */
 .mesas-hero-right {
     flex: 1;
     display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.mesas-hero-graphic-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: 400px;
+}
+
+.mesas-hero-graphic-image {
+    position: absolute;
+    top: 50px;
+    right: -40px;
+    width: 80%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mesas-hero-graphic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mesas-hero-graphic-card {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 280px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+/* Small mock card styling to perfectly match the tables mockup on bodas.net */
+.mesas-mockup-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #eaeaea;
+}
+
+.mesas-mc-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.mesas-mc-tab {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    color: #666;
+}
+
+.mesas-mc-tab.active {
+    border-color: #333;
+    color: #333;
+}
+
+.mesas-mc-field {
+    margin-bottom: 16px;
+}
+
+.mesas-mc-field label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.mesas-mc-field input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+    color: #333;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.mesas-mc-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 4px;
+}
+
+.mesas-mc-stepper span {
+    font-size: 13px;
+    color: #333;
+}
+
+.mesas-mc-stepper-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.mesas-mc-stepper-btns button {
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+    cursor: default;
+}
+
+.mesas-mc-shapes {
+    margin-bottom: 8px;
+}
+
+.mesas-mc-shapes label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.mesas-mc-shape-options {
+    display: flex;
+    gap: 8px;
+}
+
+.mesas-mc-shape {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.mesas-preview-card {
+.mesas-mc-shape.active {
+    border-color: #E45063;
+    position: relative;
+}
+
+.mesas-mc-shape.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 4px;
+    height: 4px;
+    background: #E45063;
+    border-radius: 50%;
+}
+
+.round-dots {
+    width: 14px;
+    height: 14px;
+    border: 1.5px dashed #aaa;
+    border-radius: 50%;
+}
+
+.square {
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #aaa;
+    border-radius: 2px;
+}
+
+.rect-dots {
+    width: 18px;
+    height: 12px;
+    border: 1.5px dashed #aaa;
+    border-radius: 2px;
+}
+
+.u-shape {
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #aaa;
+    border-top: none;
+}
+
+.l-shape {
+    width: 10px;
+    height: 14px;
+    border-left: 1.5px solid #aaa;
+    border-bottom: 1.5px solid #aaa;
+}
+
+
+/* ─── FEATURES GRID ───────────────────────────────────── */
+.mesas-features-sec {
+    padding: 5rem 0 6rem;
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
-    padding: 1.2rem;
-    width: 100%;
-    max-width: 320px;
-}
-
-.mesas-preview-tabs {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.mesas-preview-tab {
-    padding: 0.3rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.82rem;
-    color: var(--text-light);
-    cursor: pointer;
-    border: 1px solid var(--border-color);
-}
-
-.mesas-preview-tab.active {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-}
-
-.mesas-preview-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.6rem 0.4rem;
-    border-bottom: 1px solid #f5f5f5;
-}
-
-.mesas-preview-row:last-child {
-    border-bottom: none;
-}
-
-.mesas-preview-row p {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--secondary);
-    margin: 0;
-}
-
-.mesas-preview-row span {
-    font-size: 0.72rem;
-    color: var(--text-light);
-}
-
-/* ─── FEATURES ──────────────────────────────────────── */
-.mesas-features {
-    background: #fff;
-    border-top: 1px solid var(--border-light);
-    padding: 5rem 2rem;
-    text-align: center;
 }
 
 .mesas-features-inner {
-    max-width: 1000px;
+    max-width: 950px;
     margin: 0 auto;
 }
 
-.mesas-features h2 {
+.mesas-features-inner h2 {
     font-family: var(--font-heading);
-    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-size: 2.2rem;
     color: var(--secondary);
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.3;
+    margin-bottom: 1rem;
 }
 
-.mesas-feat-sub {
-    font-size: 0.98rem;
-    color: var(--text-light);
-    max-width: 640px;
-    margin: 0 auto 3rem;
-    line-height: 1.65;
+.mesas-features-desc {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 4rem;
 }
 
 .mesas-features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 3rem 4rem;
 }
 
-.mesas-feature-card {
+.mesas-feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
     text-align: center;
 }
 
-.mesas-feat-emoji {
-    font-size: 2.8rem;
+.mesas-feat-icon-wrap {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
-.mesas-feature-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 700;
+.mesas-feature-item h3 {
+    font-size: 1.15rem;
     color: var(--secondary);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
 }
 
-.mesas-feature-card p {
-    font-size: 0.88rem;
+.mesas-feature-item p {
+    font-size: 0.95rem;
     color: var(--text-light);
     line-height: 1.6;
 }
 
-/* ─── TOOL ──────────────────────────────────────────── */
-.mesas-tool {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem 5rem;
-}
-
-.mesas-tool-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.8rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.mesas-tool-header h2 {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    color: var(--secondary);
-    font-weight: 700;
-}
-
-.mesas-view-toggle {
-    display: flex;
-    border: 1.5px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.mesas-view-toggle button {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    background: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 0.88rem;
-    color: var(--text-light);
-    transition: background 0.15s, color 0.15s;
-}
-
-.mesas-view-toggle button.active {
-    background: var(--primary);
-    color: #fff;
-}
-
-.mesas-tool-body {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 1.5rem;
-    align-items: start;
-}
-
-/* ─── SIDEBAR ───────────────────────────────────────── */
-.mesas-sidebar {
-    background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 14px;
-    padding: 1.2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    position: sticky;
-    top: 80px;
-}
-
-.mesas-sidebar h3 {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--secondary);
-    margin-bottom: 1rem;
-}
-
-.mesas-add-guest {
-    display: flex;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
-}
-
-.mesas-add-guest input {
-    flex: 1;
-    border: 1.5px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
-    font-family: var(--font-body);
-    outline: none;
-    color: var(--secondary);
-}
-
-.mesas-add-guest input:focus {
-    border-color: var(--primary);
-}
-
-.mesas-add-btn {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background 0.2s;
-}
-
-.mesas-add-btn:hover {
-    background: #a01e3a;
-}
-
-.mesas-guest-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    max-height: 280px;
-    overflow-y: auto;
-    margin-bottom: 1rem;
-}
-
-.mesas-guest-chip {
-    padding: 0.5rem 0.75rem;
-    background: #f9f9f9;
-    border: 1.5px solid var(--border-light);
-    border-radius: 8px;
-    font-size: 0.85rem;
-    color: var(--secondary);
-    cursor: pointer;
-    transition: border-color 0.15s, background 0.15s;
-    user-select: none;
-}
-
-.mesas-guest-chip:hover {
-    border-color: var(--primary);
-    background: #fef5f6;
-}
-
-.mesas-guest-chip.selected {
-    border-color: var(--primary);
-    background: #fde8e8;
-    font-weight: 600;
-}
-
-.mesas-empty-msg {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.mesas-hint {
-    font-size: 0.78rem;
-    color: var(--primary);
-    background: #fef0f0;
-    border-radius: 8px;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-
-.mesas-add-table-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    width: 100%;
-    padding: 0.6rem;
-    background: transparent;
-    border: 1.5px dashed var(--border-color);
-    border-radius: 8px;
-    color: var(--text-light);
-    font-size: 0.88rem;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-    font-family: var(--font-body);
-}
-
-.mesas-add-table-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-/* ─── PLAN GRID ─────────────────────────────────────── */
-.mesas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.2rem;
-}
-
-.mesas-table-card {
-    background: #fff;
-    border: 1.5px solid var(--border-light);
-    border-radius: 14px;
-    padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.mesas-table-card.clickable {
-    border-color: var(--primary);
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(200, 38, 74, 0.15);
-}
-
-.mesas-table-card.clickable:hover {
-    background: #fef5f7;
-}
-
-.mesas-card-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.8rem;
-}
-
-.mesas-card-name {
-    display: block;
-    font-weight: 700;
-    font-size: 0.92rem;
-    color: var(--secondary);
-}
-
-.mesas-card-sub {
-    display: block;
-    font-size: 0.72rem;
-    color: var(--text-light);
-    margin-top: 2px;
-}
-
-.mesas-del-btn {
-    margin-left: auto;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-light);
-    padding: 4px;
-    border-radius: 6px;
-    transition: color 0.2s, background 0.2s;
-}
-
-.mesas-del-btn:hover {
-    color: #e63946;
-    background: #fde8e8;
-}
-
-.mesas-seated-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-}
-
-.mesas-seated-guest {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.35rem 0.6rem;
-    background: #fef5f7;
-    border-radius: 6px;
-    font-size: 0.82rem;
-    color: var(--secondary);
-}
-
-.mesas-seated-guest button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-light);
-    font-size: 0.75rem;
-    padding: 0;
-    transition: color 0.2s;
-}
-
-.mesas-seated-guest button:hover {
-    color: #e63946;
-}
-
-.mesas-empty-seat {
-    padding: 0.35rem 0.6rem;
-    background: #f5f5f5;
-    border-radius: 6px;
-    font-size: 0.78rem;
-    color: #bbb;
-    border: 1px dashed #ddd;
-}
-
-/* ─── LIST VIEW ─────────────────────────────────────── */
-.mesas-list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.mesas-list-row {
-    background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 1rem 1.2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.mesas-list-row-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.mesas-list-row-header strong {
-    font-size: 0.95rem;
-    color: var(--secondary);
-}
-
-.mesas-list-badge {
-    margin-left: auto;
-    background: #fde8e8;
-    color: var(--primary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 2px 10px;
-    border-radius: 20px;
-}
-
-.mesas-list-guest {
-    padding: 0.4rem 0;
-    font-size: 0.88rem;
-    color: var(--secondary);
-    border-bottom: 1px solid #f5f5f5;
-}
-
-.mesas-list-guest:last-child {
-    border-bottom: none;
-}
 
 /* ─── RESPONSIVE ─────────────────────────────────────── */
-@media (max-width: 900px) {
-    .mesas-hero {
+@media (max-width: 992px) {
+    .mesas-hero-content {
         flex-direction: column;
-        padding: 5rem 2rem 3rem;
     }
 
     .mesas-hero-left {
         max-width: 100%;
+        text-align: center;
+    }
+
+    .mesas-breadcrumb {
+        justify-content: center;
+    }
+
+    .mesas-register-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mesas-register-inputs {
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto 1.5rem;
     }
 
     .mesas-features-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
-    .mesas-tool-body {
-        grid-template-columns: 1fr;
+    .mesas-hero-graphic-image {
+        display: none;
     }
 
-    .mesas-sidebar {
-        position: static;
+    .mesas-hero-graphic-card {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .mesas-hero-graphic-wrapper {
+        height: auto;
     }
 }
